@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.9)  9 SEP 2015 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.9)  10 SEP 2015 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1701,7 +1701,7 @@ Dictionary: glossaries-dictionary, Language: English
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
 line 14.
  (./pages/cover.tex
-<logos/tum.pdf, id=175, 54.2025pt x 29.10875pt>
+<logos/tum.pdf, id=199, 54.2025pt x 29.10875pt>
 File: logos/tum.pdf Graphic file (type pdf)
  <use logos/tum.pdf>
 Package pdftex.def Info: logos/tum.pdf used on input line 13.
@@ -1709,7 +1709,7 @@ Package pdftex.def Info: logos/tum.pdf used on input line 13.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 25.
 
-<logos/faculty.pdf, id=176, 30.1125pt x 33.12375pt>
+<logos/faculty.pdf, id=200, 30.1125pt x 33.12375pt>
 File: logos/faculty.pdf Graphic file (type pdf)
  <use logos/faculty.pdf>
 Package pdftex.def Info: logos/faculty.pdf used on input line 31.
@@ -1835,25 +1835,34 @@ Chapter 3.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <12> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 19.
-<generic1.png, id=320, 685.56125pt x 173.64874pt>
-File: generic1.png Graphic file (type png)
- <use generic1.png>
-Package pdftex.def Info: generic1.png used on input line 22.
-(pdftex.def)             Requested size: 376.42744pt x 95.35077pt.
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 15.
 
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[4] <generic2.png, id=326, 737.75626pt x 272.01625pt>
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+
+ []
+
+
+Overfull \vbox (5.29999pt too high) has occurred while \output is active []
+
+
+[5] <generic1.png, id=359, 685.56125pt x 173.64874pt>
+File: generic1.png Graphic file (type png)
+ <use generic1.png>
+Package pdftex.def Info: generic1.png used on input line 32.
+(pdftex.def)             Requested size: 376.42744pt x 95.35077pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<generic2.png, id=361, 737.75626pt x 272.01625pt>
 File: generic2.png Graphic file (type png)
  <use generic2.png>
-Package pdftex.def Info: generic2.png used on input line 29.
+Package pdftex.def Info: generic2.png used on input line 39.
 (pdftex.def)             Requested size: 376.42744pt x 138.7887pt.
 
 
@@ -1863,58 +1872,45 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[5 <./generic1.png>]
+[6]
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[6 <./generic2.png>] <generic3.png, id=343, 737.75626pt x 272.01625pt>
+[7 <./generic1.png> <./generic2.png>]
+<generic3.png, id=376, 737.75626pt x 272.01625pt>
 File: generic3.png Graphic file (type png)
-
-<use generic3.png>
-Package pdftex.def Info: generic3.png used on input line 38.
+ <use generic3.png>
+Package pdftex.def Info: generic3.png used on input line 48.
 (pdftex.def)             Requested size: 376.42744pt x 138.7887pt.
- <generic4.png, id=345, 685.56125pt x 183.68625pt>
+
+Overfull \vbox (5.29999pt too high) has occurred while \output is active []
+
+
+[8 <./generic3.png>] <generic4.png, id=384, 685.56125pt x 183.68625pt>
 File: generic4.png Graphic file (type png)
 
 <use generic4.png>
-Package pdftex.def Info: generic4.png used on input line 48.
+Package pdftex.def Info: generic4.png used on input line 58.
 (pdftex.def)             Requested size: 376.42744pt x 100.86237pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<generic5.png, id=347, 695.59875pt x 178.6675pt>
+ <generic5.png, id=386, 695.59875pt x 178.6675pt>
 File: generic5.png Graphic file (type png)
- <use generic5.png>
-Package pdftex.def Info: generic5.png used on input line 56.
+
+<use generic5.png>
+Package pdftex.def Info: generic5.png used on input line 66.
 (pdftex.def)             Requested size: 376.42744pt x 96.6862pt.
 
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[7 <./generic3.png>]
+[9 <./generic4.png>]
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[8 <./generic4.png> <./generic5.png>]
-Overfull \vbox (5.29999pt too high) has occurred while \output is active []
-
-
-[9] <env.png, id=366, 583.17876pt x 329.23pt>
+[10 <./generic5.png>] <env.png, id=400, 583.17876pt x 329.23pt>
 File: env.png Graphic file (type png)
  <use env.png>
-Package pdftex.def Info: env.png used on input line 70.
+Package pdftex.def Info: env.png used on input line 80.
 (pdftex.def)             Requested size: 250.95587pt x 141.67665pt.
-
-Overfull \vbox (5.29999pt too high) has occurred while \output is active []
-
-
-[10 <./env.png>] <presentation-detail.png, id=374, 1014.79124pt x 544.0325pt>
-File: presentation-detail.png Graphic file (type png)
-
-<use presentation-detail.png>
-Package pdftex.def Info: presentation-detail.png used on input line 81.
-(pdftex.def)             Requested size: 355.51976pt x 190.58855pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1923,40 +1919,53 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[11]
+[11] <presentation-detail.png, id=407, 1014.79124pt x 544.0325pt>
+File: presentation-detail.png Graphic file (type png)
+
+<use presentation-detail.png>
+Package pdftex.def Info: presentation-detail.png used on input line 91.
+(pdftex.def)             Requested size: 355.51976pt x 190.58855pt.
+
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[12 <./presentation-detail.png>]
-<playrate.png, id=390, 1158.3275pt x 484.81125pt>
+[12 <./env.png>]
+Overfull \vbox (5.29999pt too high) has occurred while \output is active []
+
+
+[13 <./presentation-detail.png>]
+<playrate.png, id=424, 1158.3275pt x 484.81125pt>
 File: playrate.png Graphic file (type png)
  <use playrate.png>
-Package pdftex.def Info: playrate.png used on input line 93.
+Package pdftex.def Info: playrate.png used on input line 103.
 (pdftex.def)             Requested size: 376.42744pt x 157.54698pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[13 <./playrate.png>] <filtering.png, id=401, 928.46875pt x 489.83pt>
+[14] <filtering.png, id=434, 928.46875pt x 489.83pt>
 File: filtering.png Graphic file (type png)
-
-<use filtering.png>
-Package pdftex.def Info: filtering.png used on input line 105.
+ <use filtering.png>
+Package pdftex.def Info: filtering.png used on input line 115.
 (pdftex.def)             Requested size: 355.51976pt x 187.5649pt.
 
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[14 <./filtering.png>]) (./chapters/implementation.tex
+[15 <./playrate.png>]) (./chapters/implementation.tex
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[15]
+[16 <./filtering.png>]
 Chapter 4.
-[16
+[17
 
 
-] <usecase.png, id=418, 908.39375pt x 672.5125pt>
+] <usecase.png, id=452, 908.39375pt x 672.5125pt>
 File: usecase.png Graphic file (type png)
  <use usecase.png>
 Package pdftex.def Info: usecase.png used on input line 10.
@@ -1977,11 +1986,11 @@ LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[17]
+[18]
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[18 <./usecase.png>] <deployment.png, id=434, 897.3525pt x 636.3775pt>
+[19 <./usecase.png>] <deployment.png, id=469, 897.3525pt x 636.3775pt>
 File: deployment.png Graphic file (type png)
 
 <use deployment.png>
@@ -1991,19 +2000,19 @@ Package pdftex.def Info: deployment.png used on input line 36.
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[19]
+[20]
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[20 <./deployment.png>]
-Overfull \vbox (5.29999pt too high) has occurred while \output is active []
-
-
-[21]
+[21 <./deployment.png>]
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
 [22]
+Overfull \vbox (5.29999pt too high) has occurred while \output is active []
+
+
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
@@ -2012,32 +2021,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[23]
+[24]
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/pplx/b/it' tried instead on input line 63.
 
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[24] <homeLD.png, id=466, 1694.33pt x 909.3975pt>
+[25] <homeLD.png, id=500, 1694.33pt x 909.3975pt>
 File: homeLD.png Graphic file (type png)
  <use homeLD.png>
 Package pdftex.def Info: homeLD.png used on input line 81.
 (pdftex.def)             Requested size: 250.95587pt x 134.68307pt.
 
-<homeSD.png, id=467, 478.78876pt x 721.69624pt>
+<homeSD.png, id=501, 478.78876pt x 721.69624pt>
 File: homeSD.png Graphic file (type png)
  <use homeSD.png>
 Package pdftex.def Info: homeSD.png used on input line 88.
 (pdftex.def)             Requested size: 125.47794pt x 189.13425pt.
 
-<detailsLD.png, id=468, 1273.75874pt x 725.71124pt>
+<detailsLD.png, id=502, 1273.75874pt x 725.71124pt>
 File: detailsLD.png Graphic file (type png)
  <use detailsLD.png>
 Package pdftex.def Info: detailsLD.png used on input line 97.
 (pdftex.def)             Requested size: 250.95587pt x 142.96928pt.
 
-<swipeleftSD.png, id=469, 471.7625pt x 713.66624pt>
+<swipeleftSD.png, id=503, 471.7625pt x 713.66624pt>
 File: swipeleftSD.png Graphic file (type png)
  <use swipeleftSD.png>
 Package pdftex.def Info: swipeleftSD.png used on input line 104.
@@ -2046,19 +2055,19 @@ Package pdftex.def Info: swipeleftSD.png used on input line 104.
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[25] <playSDb.png, id=475, 476.78125pt x 715.67375pt>
+[26] <playSDb.png, id=509, 476.78125pt x 715.67375pt>
 File: playSDb.png Graphic file (type png)
  <use playSDb.png>
 Package pdftex.def Info: playSDb.png used on input line 116.
 (pdftex.def)             Requested size: 125.47794pt x 188.3422pt.
 
-<playSDd.png, id=476, 477.785pt x 719.68875pt>
+<playSDd.png, id=510, 477.785pt x 719.68875pt>
 File: playSDd.png Graphic file (type png)
  <use playSDd.png>
 Package pdftex.def Info: playSDd.png used on input line 123.
 (pdftex.def)             Requested size: 125.47794pt x 189.00348pt.
 
-<playSDc.png, id=477, 479.7925pt x 723.70375pt>
+<playSDc.png, id=511, 479.7925pt x 723.70375pt>
 File: playSDc.png Graphic file (type png)
  <use playSDc.png>
 Package pdftex.def Info: playSDc.png used on input line 128.
@@ -2067,18 +2076,18 @@ Package pdftex.def Info: playSDc.png used on input line 128.
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[26 <./homeLD.png> <./homeSD.png>]
+[27 <./homeLD.png> <./homeSD.png>]
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[27 <./detailsLD.png> <./swipeleftSD.png>]
-<playerLD.png, id=498, 1282.7925pt x 723.70375pt>
+[28 <./detailsLD.png> <./swipeleftSD.png>]
+<playerLD.png, id=532, 1282.7925pt x 723.70375pt>
 File: playerLD.png Graphic file (type png)
  <use playerLD.png>
 Package pdftex.def Info: playerLD.png used on input line 144.
 (pdftex.def)             Requested size: 250.95587pt x 141.57994pt.
 
-<ratingSD.png, id=499, 476.78125pt x 719.68875pt>
+<ratingSD.png, id=533, 476.78125pt x 719.68875pt>
 File: ratingSD.png Graphic file (type png)
  <use ratingSD.png>
 Package pdftex.def Info: ratingSD.png used on input line 151.
@@ -2092,14 +2101,14 @@ Underfull \hbox (badness 3271) in paragraph at lines 152--152
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[28 <./playSDb.png> <./playSDd.png> <./playSDc.png>]
-<filterLD.png, id=508, 1280.785pt x 722.7pt>
+[29 <./playSDb.png> <./playSDd.png> <./playSDc.png>]
+<filterLD.png, id=542, 1280.785pt x 722.7pt>
 File: filterLD.png Graphic file (type png)
  <use filterLD.png>
 Package pdftex.def Info: filterLD.png used on input line 162.
 (pdftex.def)             Requested size: 250.95587pt x 141.60411pt.
 
-<swiperightSD.png, id=509, 468.75125pt x 715.67375pt>
+<swiperightSD.png, id=543, 468.75125pt x 715.67375pt>
 File: swiperightSD.png Graphic file (type png)
  <use swiperightSD.png>
 Package pdftex.def Info: swiperightSD.png used on input line 169.
@@ -2108,33 +2117,33 @@ Package pdftex.def Info: swiperightSD.png used on input line 169.
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[29 <./playerLD.png> <./ratingSD.png>]) (./chapters/evaluation.tex
+[30 <./playerLD.png> <./ratingSD.png>]) (./chapters/evaluation.tex
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[30 <./filterLD.png> <./swiperightSD.png>]
+[31 <./filterLD.png> <./swiperightSD.png>]
 Chapter 5.
-) (./chapters/conclusion.tex [31
+) (./chapters/conclusion.tex [32
 
 
 ]
 Chapter 6.
-) (./chapters/appendixA.tex [32
+) (./chapters/appendixA.tex [33
 
 
 ]
 Appendix A.
-<class_diagramSD.png, id=531, 1065.9825pt x 748.7975pt>
+<class_diagramSD.png, id=566, 1065.9825pt x 748.7975pt>
 File: class_diagramSD.png Graphic file (type png)
 
 <use class_diagramSD.png>
 Package pdftex.def Info: class_diagramSD.png used on input line 3.
 (pdftex.def)             Requested size: 376.42744pt x 264.4139pt.
- [33
+ [34
 
 
  <./class_diagramSD.png>]
-<class_diagramLD.png, id=538, 664.4825pt x 753.81625pt>
+<class_diagramLD.png, id=572, 664.4825pt x 753.81625pt>
 File: class_diagramLD.png Graphic file (type png)
 
 <use class_diagramLD.png>
@@ -2151,14 +2160,14 @@ No file main.acr.
 Overfull \vbox (5.29999pt too high) has occurred while \output is active []
 
 
-[34 <./class_diagramLD.png>]
+[35 <./class_diagramLD.png>]
 Package tocbasic Info: character protrusion at lof deactivated on input line 46
 .
  (./main.lof)
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
- [35
+ [36
 
 
 ]
@@ -2173,7 +2182,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 47
 LaTeX Warning: Empty bibliography on input line 49.
 
 No complaints by nag.
-[36
+[37
 
 
 ]
@@ -2183,7 +2192,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 27FE8832F589DE2972864B03190E01A5;3161.
+(rerunfilecheck)             Checksum: AFE96A02FA49663B25E4D35BC1546F8B;3657.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2193,10 +2202,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41890 strings out of 493117
- 883347 string characters out of 6135434
- 1501254 words of memory out of 5000000
- 44172 multiletter control sequences out of 15000+600000
+ 41903 strings out of 493117
+ 883558 string characters out of 6135434
+ 1501256 words of memory out of 5000000
+ 44178 multiletter control sequences out of 15000+600000
  51242 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,83p,1827b,3086s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2206,10 +2215,10 @@ xlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (46 pages, 4627689 bytes).
+Output written on main.pdf (47 pages, 4632593 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 109 named destinations out of 1000 (max. 500000)
- 33759 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 653 PDF objects out of 1000 (max. 8388607)
+ 513 compressed objects within 6 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 33807 words of extra memory for PDF output out of 35830 (max. 10000000)
 
