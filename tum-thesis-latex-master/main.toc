@@ -30,80 +30,82 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.4}Task: What to Distribute?}{5}{subsection.3.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.5}Migrating Item Consumption}{6}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.5}Distributed UI Scenarios}{6}{subsection.3.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.6}Performing Parallel Activities}{7}{subsection.3.1.6}
+\contentsline {subsubsection}{\nonumberline Migrating Item Consumption}{6}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.7}Overview And Detail Presentations}{8}{subsection.3.1.7}
+\contentsline {subsubsection}{\nonumberline Performing Parallel Activities}{7}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.8}Content Filtering}{9}{subsection.3.1.8}
+\contentsline {subsubsection}{\nonumberline Overview And Detail Presentations}{8}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.9}Content Redirection}{9}{subsection.3.1.9}
+\contentsline {subsubsection}{\nonumberline Content Filtering}{9}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Content Redirection}{10}{section*.11}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Design for a Single-User Video Recommender System in a Distributed UI Environment}{10}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Distribute for Whom?: UI Distribution In a Single-User System}{10}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Distribute for Whom?: UI Distribution In a Single-User System}{11}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Platforms and Environment}{11}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Platforms and Environment}{12}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Recommendation Tasks in a Distributed UI Environment}{12}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Recommendation Tasks in a Distributed UI Environment}{13}{subsection.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline User Profile Creation}{12}{section*.9}
+\contentsline {subsubsection}{\nonumberline User Profile Creation}{13}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Presentation of Recommendation Results}{13}{section*.11}
+\contentsline {subsubsection}{\nonumberline Presentation of Recommendation Results}{13}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Recommended Item Consumption}{14}{section*.12}
+\contentsline {subsubsection}{\nonumberline Recommended Item Consumption}{15}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Rating of Recommended Items}{14}{section*.14}
+\contentsline {subsubsection}{\nonumberline Rating of Recommended Items}{15}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Filtering Recommended Items}{15}{section*.15}
+\contentsline {subsubsection}{\nonumberline Filtering Recommended Items}{16}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Transferring Recommendation Lists}{16}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.4}Transferring Recommendation Lists}{17}{subsection.3.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.5}Pre-Configuring the System}{16}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.5}Pre-Configuring the System}{17}{subsection.3.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementation}{17}{chapter.4}
+\contentsline {chapter}{\numberline {4}Implementation}{18}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Prototype Versions and Functionalities}{18}{section.4.1}
+\contentsline {section}{\numberline {4.1}Prototype Versions and Functionalities}{19}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Non-Distributed Vs. Distributed Prototype Versions}{18}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Non-Distributed Vs. Distributed Prototype Versions}{19}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Use Cases and Functionalities}{18}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Use Cases and Functionalities}{19}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Overview System Architecture}{20}{section.4.2}
+\contentsline {section}{\numberline {4.2}Overview System Architecture}{21}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Mobile Application}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}Mobile Application}{22}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}LD Screen Application}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}LD Screen Application}{23}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Communication Layer}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Communication Layer}{24}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Implementation of Distributed Scenarios}{24}{section.4.3}
+\contentsline {section}{\numberline {4.3}Implementation of Distributed Scenarios}{25}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Establishing Connection}{25}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Establishing Connection}{26}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Loading Video Data}{26}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Loading Video Data}{27}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Presentation of Recommended Videos}{26}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.3}Presentation of Recommended Videos}{27}{subsection.4.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Presentation of Video Details}{27}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.4}Presentation of Video Details}{28}{subsection.4.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Playing a Video}{28}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.5}Playing a Video}{29}{subsection.4.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.6}Rating a Video}{29}{subsection.4.3.6}
+\contentsline {subsection}{\numberline {4.3.6}Rating a Video}{30}{subsection.4.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.7}Filtering Recommendations}{30}{subsection.4.3.7}
+\contentsline {subsection}{\numberline {4.3.7}Filtering Recommendations}{31}{subsection.4.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{32}{chapter.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{33}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion And Future Work}{33}{chapter.6}
+\contentsline {chapter}{\numberline {6}Conclusion And Future Work}{34}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix: Class Diagrams}{34}{appendix.A}
+\contentsline {chapter}{\numberline {A}Appendix: Class Diagrams}{35}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Class Diagram of Mobile Application}{34}{section.A.1}
+\contentsline {section}{\numberline {A.1}Class Diagram of Mobile Application}{35}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Class Diagram of LD Application}{35}{section.A.2}
+\contentsline {section}{\numberline {A.2}Class Diagram of LD Application}{36}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{36}{appendix*.24}
+\contentsline {chapter}{\nonumberline List of Figures}{37}{appendix*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Tables}{37}{appendix*.25}
+\contentsline {chapter}{\nonumberline List of Tables}{38}{appendix*.30}
