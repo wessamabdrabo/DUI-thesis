@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Sun Sep 20 23:10:22 CEST 2015
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=main.tex
+outputFile=main.pdf
+langSpell=en
+markDer=true
+srcDir=tum-thesis-latex-master/
