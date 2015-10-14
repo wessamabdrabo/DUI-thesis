@@ -1,166 +1,226 @@
 \chapter{Background and Related Work}\label{chapter:litreview}
 \section{Distributed User Interface}
 Overall definition of DUI and intro for subsection...
-\subsection{Motivation for DUIs}
-
-\cite{manca2011distributing} One of the main technological trends is the
-steadily increasing number of devices per person. This has an impact on the user
-interface languages and technologies because it will be more and more common to
-interact with an application through multiple devices.\\
-
-\cite{melchior2011distribution}The domain of Distributed User Interfaces (DUI) is still in evolution and there exist no toolkit allowing the creation of DUIs.
-In most pieces of work, there is almost no genuine DUI. \\
-
-\cite{melchior2011distribution}The problem is that the granularity of UI
-distributed elements is often coarse-grained; it is not possible to distribute
-at the widget level.\\
-
-\cite{demeure20084c}
-With the advent of ubiquitous computing and the ever increasing amount of computing platforms, the user is confronted with more and more situations where she is invited to move from one platform to an- other
-while carrying out her interactive task, across several platforms or even with
-the platforms them- selves. The ultimate situation is when the user is carry-
-ing out a task in a physical environment where several systemsareconcurrentlyworkingondifferentphysical platforms, but forming a single task oriented user inter- face from the user’s viewpoint. All these situations rep- resent typical cases of Distributed User Interfaces (DUIs) where one or many parts or whole of one or many user interfaces are distributed in time and space depending on several parameters of the context of use, such as the user, the computing platform, and the physical environment where the task is carried out [5].\\
-
-\cite{elmqvist2011distributed}Distributed user interfaces are vital for the new
-generation of pervasive and interoperable interactive systems that will make up tomorrow’s computing environments. \\
-
-\cite{elmqvist2011distributed}The face of computing is changing. Computers can
-no longer be relied upon to double in performance and memory on a regular basis, and the reaction within the
-community has been to increasingly focus on multicore and parallel systems where
-several different (i.e., physically separated) entities work together to achieve
-a com- mon result. Distributed user interfaces can simply be seen as the natural
-reaction to the same phenomenon for HCI and interface research: if computation
-executes on distributed entities, then it is only natural that our interfaces
-should do the same. \\
-
-\cite{elmqvist2011distributed}However, while much research tackles problems
-that are of a DUI nature, few authors take the conceptual step to generalize these problems into models,
-frameworks, and toolkits supporting DUI development. \\
-
-\cite{vanderdonckt2010distributed} DUIs attempt to surpass user interfaces that
-are manipulated only by a sin- gle end user, on the same computing platform, and
-in the same environment, with little or no varia- tions among these axes.\\
-
-\cite{vanderdonckt2010distributed} DUIs enable end users to distribute any user
-interface element, ranging from the largest one to the smallest one, across one
-or many of these dimensions at design- and/or run-time: across different users,
-across dif- ferent computing platforms, and across different physical environments. In this way, end users could be engaged in distributed tasks that are reg- ulated by distribution rules, many of them being currently used in the real world. \\
-
-\cite{vanderdonckt2010distributed} If we look back retrospectively to the
-evolution of concerns in Human-Computer Interaction (HCI) from a Software
-Engineering (SE) point of view, we can observe that several models appeared over
-time in order to address the shortcomings ob- served in the previous generation of models.\\
-
-\cite{vanderdonckt2010distributed}The consideration of one context of use at a
-time is today completely surpassed by existing situations in the real world: a
-given user is rarely working alone and is largely involved in coopera- tion and
-collaboration; a user is rarely using one single platform at a time, but several different platforms at a time or one after another, and a user is no longer staying in the same environment since she is moving from one environment to another or across environments. In addition, a same task is no longer carried out by a single user, but by a multitude of different users, simultaneously or not. All these reasons stem for considered the fact that a UI is no longer concentrated, but distribut- ed across users, platforms, and environments, the three main dimensions of UI distribution.\\
-
-\subsubsection{Benefits of DUI.} \cite{chen2011distributed}
-Distribution Enables Redirectable Interfaces
-In a DUI construction, interfaces can be redirected and shipped around electronically so that the user can interact using a proxy device. In our system, this has been useful for minimizing physical interactions when these interac- tions are undesirable and to allow users to effect changes without incurring the costs of device switching.
-Distribution Helps Interfaces Scale In Both Directions
-The devices available in a given environment are deter- mined by a combination
-of factors that include the avail- able infrastructure, concerns about
-portability and users' personal preferences. By allowing UIs to be broken down into distributable pieces, the UI can better accommodate both device-rich and device-starved situations. Since a DUI-based system allows users to easily multiplex UI ele- ments across devices in space or time, the system can take advantage of additional devices, while offering fallbacks (like cycling through UIs) for device-starved environments.\\
-
-\subsubsection{POST-WIMP/Natural UI}
-\cite{seifried2011lessons} “natural” interaction, i.e. the UI is perceived as
-something unobtrusive or even invisible that does not require the users’
-continuous attention or a great deal of cognitive resources. the design follows
-a fundamental principle of natural UIs: “the content is the interface” [6]. This means, that the amount of administrative UI controls known
-from WIMP (e.g. menus, window bars, tool bars) is minimized so that the content
-objects themselves become the first-class citizen of the UI\ldotsabandoning
-traditional page- or dialog-oriented sequences of interaction (e.g. typical Web
-applications), users can act directly and flexibly on the objects of the task
-domain.\\
-
-
 \subsection{Fundamentals of DUIs}
 \subsubsection{Definitions}
+Despite of the relative sparsity of applications for DUIs, the literature
+includes a number of definitions for what constitutes distributed user interfaces. Some of the provided definitions are synonymous, others are
+built on different foundations, which constitutes a problem of ``a consensual
+ontology in the domain"\cite{vanderdonckt2010distributed}. In this section, we
+collect some of the well known definitions for DUIs and highlight how they
+complement each other.\\
 
-\cite{melchior2011distributed} A Distributed User Interface (DUI) is hereby
-defined as any application User Interface (UI) whose components can be
-distributed across different displays of different comput- ing platforms that
-are used by different users, whether they are working at the same place (co-located) or not (remote collaboration) [1,2,7,9]. \\
+Melchior \cite{melchior2011distributed} defines DUIs, in terms of their
+different dimensions, as ``any application User Interface (UI) whose components
+can be distributed across different displays of different computing platforms that are used by different users, whether they are working at the same place (co-located) or not (remote collaboration).'' [1,2,7,9].\\
 
+A synonymous definition is provided by Demeure et al. \cite{demeure20084c},
+however, it is provided in the light of the time and space dimensions of DUIs
+and introduces the concept of the context-of-use of DUIs.
+They define DUIs as ``those interfaces whose different parts can be distributed in time and space on different monitors, screens, and computing platforms, depending on several parameters expressing the context of use, such as the user, the computing platform, and the physical environment in which the user is carrying out her interactive task.'' \\ 
 
-\cite{demeure20084c} Distributed User Interfaces (DUIs) are those inter- faces
-whose different parts can be distributed in time and space on different
-monitors, screens, and comput- ing platforms, depending on several parameters
-ex- pressing the context of use, such as the user, the com- puting platform, and the physical environment in which the user is carrying out her interactive task. \\ 
+Perhaps one of the more comprehensive definitions is given by Vanderdonckt et
+al. \cite{vanderdonckt2010distributed} which also continues to draw on the idea of context-of-use. UI distribution
+concerns the repartition of one or many elements from one or many user interfaces in order to support one or many users to carry out one or many tasks on one or many domains in one or many contexts of use, each context of use consisting of users, platforms, and environments.\\
 
-\cite{vanderdonckt2010distributed} some of them being syno- nyms, some of them radically different, thus pos- ing a problem of a consensual ontology in the do- main.\\
+Context is defined as s triple of U P and E; user, platform and
+environment \cite{vanderdonckt2010distributed}. A single context of
+use is when a user is carrying out her task on a dedicated computing platform in
+a given environment. By expanding on a single context of use, DUIs are hence
+considered  multi-device, multi-monitor, mutli-display,
+multi-platform and multi-user. \cite{vanderdonckt2010distributed}\\
 
-\cite{vanderdonckt2010distributed} A UI distribution concerns the repartition of
-one or many elements from one or many user inter- faces in order to support one
-or many users to carry out one or many tasks on one or many do- mains in one or
-many contexts of use, each con- text of use consisting of users, platforms, and en- vironments.\\
+From the previously stated definitions, one could draw on characteristics of a
+DUI system in terms of what changes they provide for the user's interaction with
+and use of the system. Blumendorf et al. \cite{blumendorf2011distributed}
+explain that a DUI system enables user to choose the dynamically the mode and devices of interaction based
+on the current context of use. A user of DUI system could also change their
+choice of devices dynamically and on demand. All of the user's behaviours are
+configurable, which should also be storeable and loadable at different times of
+use. A DUI system is also by definition multi-modal in the sense that it allows
+for the use of different devices simultaneously. And last, a DUI system
+should enable a user to share information with other users.\\ 
 
-\cite{vanderdonckt2010distributed}  multi-device, multi-monitor, mutli-display,
-multi-platform, multi-user Multi-user: it represents an extension of the pre-
-vious usages to multiple users concurrently [5]. In this case, one or many users
-may want to dis- tribute parts or whole of their UI across several monitors,
-devices, platforms, or displays. \\
+DUIs' definitions are often given in terms of the different platforms,
+environments, devices, and users they span, in other words, the dimensions of
+distribution. Elmqvist defines distributed user interfaces through the
+comprehensive definition: ``A distributed user interface is a user interface whose components are distributed across one
+or more of the dimensions input, output, platform, space, and time''
+\cite{elmqvist2011distributed}. Thus, it is important to explain what is meant
+by these different dimensions of DUIs and to go in details of how the
+distribution of such dimensions are possible.
 
-\paragraph{Context of Use.}
-\cite{vanderdonckt2010distributed}By context of use, we hereby understand that
-one user is carrying out her task on a dedicat- ed computing platform in a given
-environment, thus leading to one single context. A context is again considered
-as a triple C=(U,P,E) where U denotes a user model, P denotes a platform model, and E denotes an environment model.\\
+\subsubsection{Dimensions}
+Several studies draw on the different dimensions of DUIs
+\cite{melchior2011distributed}, \cite{demeure20084c},
+\cite{elmqvist2011distributed}, \cite{vanderdonckt2010distributed}. According to
+these studies, there are several dimensions to user interface distribution:
+user, time, space, input, output, platform, task, and element.\\ 
+Perhaps one of the earliest studies of DUI dimensions was
+given by Demeure et al. by describing the 4C model, in
+which the distribution dimensions of user interface elements, which alters the
+elements' natural habitat (configuration), are given according to the four 'C'
+s: computation (what is distributed?), in other words the element of
+distribution, which could be the task or the platform, communication (when is it distributed?)
+or time, coordination (who is it distributed?) which is a variation on the user
+dimension, and configuration (from where and to where is the distribution operated? on the physical pixel level, or
+the logical level)\cite{demeure20084c}.\\
 
-\subsection{Charachtrization of DUIs}
+The following is a presentation of the different dimensions in details, and
+how they are defined and mentioned in different studies.
+\paragraph{Space.}  Both Elmqvist \cite{elmqvist2011distributed} and Melchior
+\cite{melchior2011distributed} agree on what defines the space  dimension of
+DUIs. This dimension is concerned with whether the user interface is
+restricted to the same physical space/ geographic location, or if it could be
+distributed geographically. In other words, space defines whether tasks/subtasks
+could be carried out in the same location, or distributed over different
+locations. 
 
-\cite{blumendorf2011distributed} It shows (1) automatic choice of interaction
-devices depending on context information, (2) the dynamic change of devices based on context information, (3) the configuration of this behaviour by users, (4) user-control to change devices on demand, (5) the sharing of information with other users, (6) the simultaneous usage of different devices to provide multimodal interaction, (7) the user- controlled sharing of parts of the application, and (8) storing and loading of configurations.\\
+\paragraph{User.} The user dimension is presented differently in different
+studies. Vanderdonckt \cite{vanderdonckt2010distributed} defines it in terms of 
+``locus of distribution control''; whether it is in the hands of the user, the
+system, or in mixed-initiative way.\\
+This idea is originally defined in 4C model's coordination dimension which is a
+question of ``who is distributing the interactive system''\cite{demeure20084c}.
+In other words, who is responsible for the detection of a need for distribution,
+computation of distributed alternatives, selection of a distribution strategy and
+finally the execution of this alternative. ``For example, a user may decide
+that there is a need to do so and selects various portions of the UI which could
+then be migrated to other platforms she is using. When the task is finished, she
+may want to recall all migrated portions to restore the initial UI. In this
+case, detection, computation, and selection are user-initiated while execution
+is system-initiated.'' \cite{demeure20084c}\\
+Melchior defines the user dimension differently. According to
+\cite{melchior2011distributed}, the user dimension concerns how users interact
+with a system: whether the system involves single or multi-users, and whether
+the system users could be working competitively or coordinating to perform a
+certain task, concurrently or sequentially.\\
+Elmqvist, on the other hand, ignores the user dimension from his definition,
+claiming that ``In other words, whether or not a DUI is used by a single user or multiple users is not pertinent to our
+definition.''\cite{elmqvist2011distributed}
 
+\paragraph{Platforms.} This dimension is concerned with whether the user
+interface is executed on a single computing platform, or distributed along
+different platform \cite{elmqvist2011distributed}. What could be meant by a
+platform are devices with different architectures or operating systems
+Now, the focus is not on a multi device environment, which is an environment
+consisting of multiple devices or displays, but rather on how a single interface
+could be distributed in such an environment with each of the devices with its
+own interaction (input/output) modalities \cite{elmqvist2011distributed}. This
+idea is regaining much attention since the number of devices a given user
+interacts with in a given environment are increasing and getting smaller in
+size.
+Vanderdinckt et al. mention that while there has been work done in the areas of
+muti-device UIs (UIs produced for several devices simultaneously) and UI
+migration(transferring UIs from one device to another while maintaining task
+continuity), ``less work has been however devoted towards
+dividing a UI across devices, displays, or platforms, where they are used by the
+same user or shared by different users \ldots This includes use of
+multiple monitors on a same computing platform by a single user, use of
+multiple platforms by a single user with synchronisation between, exchange of
+information between platforms belonging to different users, moving information
+between displays on a single platforms, partition of tasks across displays for a
+single user, sharing common information on a common display while keeping some
+information private on a own platform" \cite{vanderdonckt2010distributed}.\\
+
+\paragraph{Input.} Input is consider one of the key aspects in
+multi-device scenarios which involves managing interaction with the different
+devices with their different input modalities \cite{elmqvist2011distributed}.
+One method of handling input in multi-device environments is by using input
+redirection ``where the input events from one device are sent to another device
+in the environment.''\cite{elmqvist2011distributed}
+
+\paragraph{Output.} The output dimension is concerned with how the system will
+present the content to the user, or allow the user to control the content
+presentation in a multi-device environment. In other words, will the content be
+presented and will always reside on one device, or
+redirecting this content from one device/platform to another will be made
+possible. This is what is defined as content or display redirection
+\cite{elmqvist2011distributed}.
+
+\paragraph{Task.} Many of the studies that tackle the different dimension of
+DUIs discuss the atomic element of UI distribution. For some, the distribution
+could be done at the level of UI widgets \cite{vanderdonckt2010distributed}, and
+it could even go down to the level of individual pixels \cite{demeure20084c}.
+For others however, what defines the basic level of distribution is usually a
+task. Lopez et al. \cite{lopez2011formal} defines a task in this context ``as the
+set of actions the user performs to accomplish an objective."
+Vanderdonckt et al. \cite{vanderdonckt2010distributed} mention that 
+to be fully distributed, ``one or many tasks should be considered to be
+carried out simultaneously or not in a distributed way.''  Luyten et al. [17,18] introduced the notion of situated task in
+order to model how a task could be distributed into several sub-tasks to be
+carried out by one user, but on different platforms in the same environment
+over time.\\
+
+\paragraph{Time.} The time dimension is another crucial aspect of distribution
+and also another that is defined differently in different studies. In the 4C
+model, it is referred to as the communication aspect of distribution that
+answers the question of ``when the distribution happens'' \cite{demeure20084c}.
+Demeure et al. explains that a UI distribution is either static of dynamic
+depending on when the distribution takes places. If the UI distribution is
+static (compile or development time), this means that the distribution is pre-
+configured in the system and can not be changed unless the system is
+changed/recoded and recompiled. While dynamic UI distribution (run-time) allows
+for the change of the UI distribution scheme or strategy at run-time, for
+example, when on a given user input or behavoir, without the need to recode or
+recompile the system \cite{demeure20084c}. In dynamic systems,
+when the UI requests the loading of a new component, ``the control might select
+from a list of UIs with different capabilities of supporting various habitats,
+choosing the one that most closely matches the new habitat'' \cite{demeure20084c}.
+For example, if a user starts a UI on a mobile device, the system ``might
+load a minimal display component to guarantee proper presentation.'' \cite{demeure20084c}\\
+
+A different definition to the time dimension is given by Melchior as ``some
+sub-tasks are carried out during different time intervals, depending on who is contributing to the task." \cite{melchior2011distributed}. While Elmqvist et al.
+\cite{elmqvist2011distributed} define time as in interactive systems as the
+aspect that allows the UI elements to ``execute simultaneously
+(synchronously), or distributed in time (asynchronously).''\\
 
 \subsubsection{Properties}
+User interfaces of interactive systems are said to hold a number of properties
+in order to be considered fully distributed. The following is a set of
+some of the DUI properties that were mentioned in different studies.
 
-\paragraph{Portability} \cite{lopez2011formal} This property means that the UI
-as a whole or elements of the UI can be transferred between platforms and
-devices by means of easy user actions.\\
+\paragraph{Portability.}  A UI is said to be portable if ``the UI as a whole or elements of the UI can be transferred between platforms and
+devices by means of easy user actions.'' \cite{lopez2011formal}\\
 
-\paragraph{Decomposability}\cite{lopez2011formal}A DUI system is decomposable if
-given a UI composed by a number of elements, one or more elements of this UI can be
-executed independently as UI without losing their functionality.\\
+\paragraph{Decomposability.} A DUI system is said to be decomposable if the set
+of elements conforming the UI could be executed independently across different
+platforms, while keeping their functionality.\cite{lopez2011formal}\\
 
-\paragraph{Simultaneity}\cite{lopez2011formal}A DUI system is said simultaneous
-if different UI elements of the same DUI system can be managed in the same
-instant of time on different platforms.\\
+\paragraph{Simultaneity.} This property refers to
+the ability of different UI elements of the same DUI system to be managed in
+``the same instant of time'' across different platforms.
+\cite{lopez2011formal}\\
 
-\paragraph{Continuity}\cite{lopez2011formal}A DUI system is said continuous if
-an element of the DUI system can be transferred to another platform of the same
-DUI system maintaining the state.\\
+\paragraph{Continuity.} is the system's ability to maintain
+its state while transferring elements of its UI from across different platforms
+in the distributed environments.\cite{lopez2011formal}\\
 
+\paragraph{Consistency.} A DUI system is consistent if it manages all of its
+distributed components in the same manner.\cite{lopez2011formal}\\
 
-\paragraph{Consistency}\cite{lopez2011formal}A DUI system is said consistent if
-different UI elements of the same DUI system are managed in the same way.\\
+\paragraph{Flexibility.} with a flexible DUI system, the
+user could perform the same action on different platforms in different
+ways.\cite{lopez2011formal}\\
 
-\paragraph{Flexibility}\cite{lopez2011formal}A DUI system supports flexibility
-if users can perform the same action in different ways supported by the different platforms
-of the DUI system.\\
-
-
- \paragraph{Multi and Cross} \cite{blumendorf2011distributed} multi and cross:
-device, modal, user and application. ``“Multi” here refers to the fact that the
-UI addresses more than one element per dimension (i.e. device, modality, user,
-application) at once, while “cross” refers to the fact that an element can
-change dynamically at runtime (e.g. moving from speech to graphical output or
-transferring controls to a different user).''\\
-
+\paragraph{Multi and Cross.} a DUI system is said to be multi and cross:
+device, modal, user and application  \cite{blumendorf2011distributed},
+addressing more than one UI element at once on different dimensions, while cross
+refers to the dynamic change of elements at run-time.\\
 
 \paragraph{Usability.}
 \cite{blumendorf2011distributed}Considering the dimensions of DUIs (i.e. varying
 devices, multiple modalities, different users, many application), it might be
 difficult for users to keep their mental model of the interactive system up-to-date. The user is challenged by interacting with a dynamic and widely distributed system of (maybe) not obviously related IRs that can also change for not immediately obvious reasons. This requires special consideration for the usability and intelligibility of DUIs.\\
 
-\paragraph{Controllability.} 
-\cite{blumendorf2011distributed}Controllability denotes the capability of users
-to always have full control about the distribution of a UI. Thus users should
-always have the possibility to adapt the distribution to their needs and store
-and reactivate static and dynamic distribution configurations. One approach for
-providing such functionalities would be a meta-UI.\\
+\paragraph{Controllability.} denotes the span of control of the user over all
+aspect of the distributed UI. Thus, users should be enabled to configure,
+reconfigure, save configuration of the system which should statically or
+dynmically enable them to tailor the distribution of UI to their needs. One
+approach to provide users controlability is through the use of a meta-UI which
+is suggest by both the 4C model \cite{demeure20084c} and adopted by Blumendorf
+et al. \cite{blumendorf2011distributed}.\\
 
 \paragraph{Continuous Interaction.}
 \cite{blumendorf2011distributed}
@@ -170,19 +230,16 @@ experience without confusion and should conserve the state of the interaction. A
 distribution across multiple devices should be consistent during the whole usage
 of the application (e.g. using two screens for one task, the next task should use the same two screens). When changing applications, distribution changes have to be reduced to a minimum. \\
 
-\pargaraph{Configuiarbility (Dynamic).} 
-
+\paragraph{Configuirability} 
 \cite{chen2011distributed} One of the strengths a UI distributed across multiple
 de- vices has over a monolithic system is the ability to flexibly add or remove
 computing resources as circumstances dic- tate. This refers to the dynamic
-aspect of a DUI system. 
-
+aspect of a DUI system.\\ 
 \cite{blumendorf2011distributed}
  So another main challenge is the specification of the capabilities and borders
 of a DUI to allow the dynamic handling, selection and adaptation of different UI
 variations at runtime. A key factor is the user who is required to be able to
 influence this process and override any kind of developer configuration. At design time this raises the well-known challenge of uncertain and unknown runtime contexts, which requires to work with assumptions and more or less detailed simulations.\\
-
 
 \paragraph{Splittability.}
 \cite{demeure20084c} a graphical container is said to be splittable, respectively
@@ -208,140 +265,6 @@ involved.
 \cite{elmqvist2011distributed} Almost the first issue that arises when migrating
 an application from one device to another with different input and output capabilities is how to adapt the application interface to the new device [8]. Thevenin and Coutaz [67] named this concept the plasticity of a user interfaces and defined it as the capacity of a UI to withstand variations in both the device and its physical environment while preserving usability. In practice, this means that a plastic interface should be able to adapt to different screen sizes (mobile device, laptop, wall-sized display), as well as to different input devices (touch, stylus, mouse, voice, gesture, etc).
 
-\subsubsection{Dimensions}
-
-\cite{melchior2011distributed} Melchior describes the dimensions of space and
-time Two dimensions: time and space. An important aspect of the distribution is
-the way users interact with the applica- tion. Users may be working at the same
-time in a competi- tive way or cooperating together to increase the effective-
-ness of the work. There can be different users working on the same application but at different time. Multiuser can be sequential or concurrent on a single computer or on several computers. While some users are working on the same computer, other users may interact with them from other computers wherever they are.\\
-\cite{melchior2011distributed} space (e.g., some subtasks are carried out in
-different locations) and time (e.g., some sub- tasks are carried out during
-different time intervals, de- pending on who is contributing to the task. \\
-
-
-\cite{demeure20084c} The 4C model ``a reference model for DUIs is introduced
-that examines DUIs ac- cording to four ‘C’ dimensions: computation (what is
-distributed?), communication (when is it distributed?), coordination (who is it
-distributed?), and con- figuration (from where and to where is the distribution
-operated? on the pysical pixel level, or the logical level).''\\
-
-\cite{demeure20084c} It also defines the notion of the user interface habitat as
-``the habitat of an interactive system con- sists of the configuration of the interactive system.''
-
-\cite{elmqvist2011distributed} defines the dimensions the dimensions of
-distributed user interfaces through the comprehensive definition: A distributed
-user interface is a user interface whose components are distributed across one or more of the dimensions input, output, platform, space, and time.
-We define the above five distribution dimensions as follows:
-• Input (I). Managing input on a single computational device, or distributed across several different devices (so-called input redirection [30, 43, 73]).
-• Output (O). Graphical output tied to a single device (display), or distributed across several devices (so-called display or content redirection [12, 63, 73]).
-• Platform (P). The interface executes on a single computing platform, or distributed across different platforms (i.e., architectures, operating systems, networks, etc).
-• Space (S). The interface is restricted to the same physical (and geographic) space, or can be distributed geographically (i.e., co-located or remote interactive spaces [2]).
-• Time (T). Interface elements execute simultaneously (synchronously), or
-distributed in time (asynchronously).\\
-
-\cite{elmqvist2011distributed} ignores the user dimension claiming that ``In
-other words, whether or not a DUI is used by a single user or multiple users is
-not perti- nent to our definition.''
-
-\paragraph{User.}
-\cite{vanderdonckt2010distributed}locus of distribution control: in the hands of
-the end user, under control of the sys- tem, or in mixed-initiative way.\\
-
-\cite{demeure20084c} 4C model coordination ``who is distributing the interactive
-system.''\\It is not made explicit whether the meta-UI is system initiated (the
-system initiates the distribution), user-initiated (the user initiates the
-distribution), or mixed-initiated (the user and the system collaborate to
-perform the distribu-tion together).\\
-Who is responsible for the detection of a need for distribution, comuptation of
-distibuted alternatives, selection of a distibution startegy and
-finally the exectution of this alternative. ``For example, a user may decide
-that there is a need to do so and selects various portions of the UI which could
-then be migrated to other platforms she is using. When the task is finished, she
-may want to recall all migrated portions to restore the initial UI. In this
-case, detection, computation, and selection are user-initiated while execution
-is system-initiated.'' \cite{demeure20084c}\\
-
-\paragraph{Platrforms.}
-\cite{elmqvist2011distributed} look at multi device environments and models for
-examples.\\ 
-\cite{elmqvist2011distributed}'' Multi device environments We use
-the unified term multi-device environment here to refer to the fact that such
-environ- ments often consist not only of multiple displays, but also of a whole
-host of individual devices, each with their own interaction method.\\
-\cite{elmqvist2011distributed}``This idea of appropriating surfaces in the
-physical world has lately resurfaced as interaction devices shrink in size
-[29].\\
-
-\cite{vanderdonckt2010distributed}Significant progress has been in the area of
-multi-device UIs (where UIs are produced for several devices simultaneously) and
-in UI migra- tion (where UIs are migrated from one device to another while
-maintaining task continuity). Less work has been however devoted towards
-dividing a UI across devices, displays, or platforms, where they are used by the
-same user or shared by dif- ferent users [2,3]\ldots This includes use of
-multiple monitors on a same computing platform by a single user [10], use of
-multiple platforms by a single user with synchronisation between, exchange of
-infor- mation between platforms belonging to different users, moving information between displays on a single platforms, partition of tasks across displays for a single user [1], sharing common information on a common display while keeping some infor- mation private on a own platform,\\
-
-
-\paragraph{Input.} 
-\cite{elmqvist2011distributed} Input redirection ``A key component of a
-multi-device environment is how to manage interaction.
-The general methodology for MDE interaction is to use input redirection [30] where the input events from one device are sent to another device in the environment.''
-
-\paragraph{Output.}
-\cite{elmqvist2011distributed} ``Allowing the user to control the content
-redirection is an important feature and a myriad of different schemes have been
-proposed. ''. Look at paper for example in conent redirection section.
-
-\paragraph{Elements.} 
-\cite{vanderdonckt2010distributed} he atomic element that could be submitted to
-distribution is any UI widget, composite then each indvidual component is also
-subject to distribution. He even goes down to the level of the pixel as the unit
-of distribution.\\
-
-\paragraph{Task.}
-\cite{lopez2011formal} A task can be defined as the set of actions the user
-performs to accomplish an objective.\\
-\cite{vanderdonckt2010distributed} In order
-to be fully distributed, one or many tasks should be considered to be carried out simultaneously or not in a distributed way. In the field of ambient
-intelligence, Luyten et al. [17,18] introduced the notion of situated task in
-order to model how a task could be distributed into several sub-tasks to be
-carried out by one user, but on dif- ferent platforms in the same environment
-over time (Fig. 3).\\
-
-\paragraph{Time.}
-4C model the communication (when the distribution happens)
-\cite{demeure20084c} the UI distribution is said to be static or dynamic de-
-pending on the distribution time: static distribution methods take place at
-development, compile, or load time, whereas dynamic distribution refers to
-methods that can be applied at runtime (Fig. 4). If an interactive system is
-scheduled for distribution at development time, then we consider that the
-definition of the habi- tats is hardwired into the interactive system and cannot
-be changed without recoding. Alternatively, a devel- oper or user can schedule a
-limited set of distribution capabilities at compile time or link time by
-configuring the interactive system for a particular set of predefined
-habitats.\\
-\cite{demeure20084c} the UI distribution is said to be static or dynamic de-
-pending on the distribution time: static distribution methods take place at
-development, compile, or load time, whereas dynamic distribution refers to
-methods that can be applied at runtime (Fig. 4). If an interactive system is scheduled for distribution at development time, then we consider that the definition of the habi- tats is hardwired into the interactive system and cannot be changed without recoding. Alternatively, a devel- oper or user can schedule a limited set of distribution capabilities at compile time or link time by configuring the interactive system for a particular set of predefined habitats. \\
-\cite{demeure20084c}When the UI requests the loading of a new component, the
-control might select from a list of UIs with different capabilities of
-supporting various habi- tats, choosing the one that most closely matches the
-new habitat. For example, if a user starts a UI on a handheld computer, the runtime system might load a minimal display component to guarantee proper pres- entation. \\
-
-\subsection{Challenges and Concerns}
-Concerns for UI distribution decribed in \cite{melchior2011distributed} Concern #1. Development of distributed user inter- faces: the development of DUI is not supported by usual tools. Most of the time, developers have to man- age the development in their own way. A lot of time is spent on the development of DUIs mostly the distrib- uted aspects.
-􏰀 Concern #2. Support for distribution of user interfaces at running time: existing DUIs are limited to predefined applications and domains of application which lead to little support for the various possibilities of distribution.
-􏰀 Concern #3. Support for multi-user collaboration: mul- ti-user applications are developed in different ways de-
-pending on the use and domain of application. The lack
-of a common base is slowing down the development.
-􏰀 Concern #4. Execution control in the distributed envi- ronment: the control of the distribution is a real prob- lem when managing DUI systems [4]. The limitations are high especially with a fixed level of granularity. Some systems can replicate windows while not being able to replicate widgets. Others can manipulate wid- gets one at a time but no group of widgets.
-􏰀 Concern #5. Network transparency: The distribution of the UIs has to be network transparent in the sense that the user should not have to worry about network details such as IP address, user network and network settings.
-􏰀 Concern #6. Lack of description of the distributed do- main and models: The researches around multi-user ap- plications and distributed user interfaces are very spe- cifics to the needs of the developers and are almost never documented or badly documented.
-Model-based Approach. .\\
-
 \subsection{Models}
 \cite{demeure20084c} the 4C model
 \cite{melchior2011distributed} model-based approach -> mention if needed
@@ -352,7 +275,7 @@ a middleware software infrastructure for distributed, migratable, and plastic in
 Another approach is to combine software engineering methods with DUI models. As early as 1996, Graham et al. [24] proposed a distributed version of the model-view-controller (MVC) paradigm. Vandervelpen and Coninx [70] apply model-based methods to user interface design, similar to Mori et al. [41]) but specifically targeted at heterogeneous device environments. Luyten and Coninx [37] also target such environments, but take a bottom-up approach focused on designing user interface elements that support seamless distribution. Finally, the recent views, instruments, governors, and objects (VIGO) model [34] can be used to build distrib- uted ubiquitous instrumental interaction applications.
 
 \subsection{Design Patterns}
-\cite{vanderdonckt2010distributed} for desgin guidlines.\\
+\cite{vanderdonckt2010distributed} for design guidelines.\\
 \cite{seifried2011lessons} design patterns and anti patterns.
 
 \subsection{Frameworks}
@@ -410,7 +333,7 @@ discontinuities had no effect on performance, but found a detrimental effect fro
 \cite{demeure20084c} One the one hand, several DUI systems exist such as IAM
 [6], i-Land [17], Stanford Interactive Mural [11], Aura [16], ConnecTables [18,19], Dygimes [20], DistriXML [9].
 
-\subsection{Dual Display:LS/SD}
+\subsection{Dual Display:LD/SD}
 The whole section is taken from \cite{kaviani2011dual}
 
 A promising approach in interacting with large public displays has been the use
@@ -446,10 +369,24 @@ four different ways that interactive and non-interactive widgets can be
 distributed across the mobile and large displays.\\
 
 
+the use of gestures -> cite woerndl\\
+
+Usability in DUIs -> cite more from 2nd conference \\
+
+\subsection{Challenges and Concerns}
+Concerns for UI distribution decribed in \cite{melchior2011distributed} Concern #1. Development of distributed user inter- faces: the development of DUI is not supported by usual tools. Most of the time, developers have to man- age the development in their own way. A lot of time is spent on the development of DUIs mostly the distrib- uted aspects.
+􏰀 Concern #2. Support for distribution of user interfaces at running time: existing DUIs are limited to predefined applications and domains of application which lead to little support for the various possibilities of distribution.
+􏰀 Concern #3. Support for multi-user collaboration: mul- ti-user applications are developed in different ways de-
+pending on the use and domain of application. The lack
+of a common base is slowing down the development.
+􏰀 Concern #4. Execution control in the distributed envi- ronment: the control of the distribution is a real prob- lem when managing DUI systems [4]. The limitations are high especially with a fixed level of granularity. Some systems can replicate windows while not being able to replicate widgets. Others can manipulate wid- gets one at a time but no group of widgets.
+􏰀 Concern #5. Network transparency: The distribution of the UIs has to be network transparent in the sense that the user should not have to worry about network details such as IP address, user network and network settings.
+􏰀 Concern #6. Lack of description of the distributed do- main and models: The researches around multi-user ap- plications and distributed user interfaces are very spe- cifics to the needs of the developers and are almost never documented or badly documented.
+Model-based Approach. .\\
+
 
 \section{Recommender Systems}
-Brief intro - pervasiveness - mobile - innovation in Ux and UI.
-Do I need to go through the basics for algorithms and other details?
- 
+Tasks
+
 \section{DUI in Recommender Systems}
 nothing except: cite the group recommendation system
