@@ -10,10 +10,15 @@ the past decade, it has become less and less uncommon for a user to get content
 tailored to her taste based on recommendation algorithms that are ever-evolving,
 providing sophisticated methods of implicitly building user profiles
 through eliciting the user's preferences, or by mining users' search histories
-or ratings for products and content. There is also continuous research on
-different recommendation matrices, such as novelity and diversity, that
-could yield more enriching user experiences with recommended content.\\
-User interface design for different recommendation phases
+or ratings for products and content. Recommendation algorithms varying from
+content-based which is done based on item-to-item similarity, to context-based
+which includes contextual information such as location and time in
+recommendation, to collaborative filtering which takes into account similar
+users' profiles, all provide a number of solutions to recommendation
+applications which usually vary in context, type of content, or kind of users.
+Moreover, continuous research is undergone to further develop recommendation
+matrices, such as novelity, diversity and serendipity, that could yield more enriching user experiences with recommended content.\\
+On the other hand, user interface design for different recommendation phases
 (specially the presentation of recommendation results), is covered by an
 increasing amount of research. However, given the ubiquity of recommendation systems, coupled with the increasing number of devices per user, as well as the different sizes,
 capabilities, platforms, and interaction modalities of such devices, little or
@@ -42,8 +47,7 @@ In most pieces of work, there is almost no genuine DUI. \\
 distributed elements is often coarse-grained; it is not possible to distribute
 at the widget level.\\
 
-\cite{demeure20084c}
-With the advent of ubiquitous computing and the ever increasing amount of computing platforms, the user is confronted with more and more situations where she is invited to move from one platform to an- other
+\cite{demeure20084c}With the advent of ubiquitous computing and the ever increasing amount of computing platforms, the user is confronted with more and more situations where she is invited to move from one platform to an- other
 while carrying out her interactive task, across several platforms or even with
 the platforms them- selves. The ultimate situation is when the user is carry-
 ing out a task in a physical environment where several systemsareconcurrentlyworkingondifferentphysical platforms, but forming a single task oriented user inter- face from the user’s viewpoint. All these situations rep- resent typical cases of Distributed User Interfaces (DUIs) where one or many parts or whole of one or many user interfaces are distributed in time and space depending on several parameters of the context of use, such as the user, the computing platform, and the physical environment where the task is carried out [5].\\
@@ -59,10 +63,6 @@ a com- mon result. Distributed user interfaces can simply be seen as the natural
 reaction to the same phenomenon for HCI and interface research: if computation
 executes on distributed entities, then it is only natural that our interfaces
 should do the same. \\
-
-\cite{elmqvist2011distributed}However, while much research tackles problems
-that are of a DUI nature, few authors take the conceptual step to generalize these problems into models,
-frameworks, and toolkits supporting DUI development. \\
 
 \cite{vanderdonckt2010distributed} DUIs attempt to surpass user interfaces that
 are manipulated only by a sin- gle end user, on the same computing platform, and
@@ -102,8 +102,60 @@ traditional page- or dialog-oriented sequences of interaction (e.g. typical Web
 applications), users can act directly and flexibly on the objects of the task
 domain.\\
 
-\section{User Study}
-
 \section{Scope and Limitations}
+Our study is concerned with the application of distributed user interfaces in
+single-user recommender systems. Our claim is that the distribution of
+recommender system's user interface leads to better user experiences. To apply
+our hypothesis, we chose the area of video recommendation. We built two high
+fidelity prototypes for video mobile recommendation applications: Monolithic Interface Recommender (MiRec), which a conventional mobile video recommendation
+application, and Distributed Interface Recommender (DiRec), which a distributed
+version of the mobile video recommender where the interface is distributed among
+the mobile device and a large-display screen.\\
+Since the goal of the study is not centered around the recommendation itself but
+rather the user interface distribution, the focus was not on developing a
+recommendation algorithm. Consequently, we used a rather simplistic
+recommendation of items based on top rated items in popular fields, and
+presented it in such a way that mimics actual recommendations.
+
+\section{User Study}
+To put our hypothesis to test, we conducted a closed user study in which
+participants were asked to use both MiRec and DiRec. Each
+participant was asked to perform a certain set of tasks on both applications
+including navigating through the recommended content, viewing videos' detailed
+information, and playing and rating of videos. Participants were then asked to
+express their direct impressions of the applications through a post-experiment
+user experience questionnaire.
 
 \section{Structure of The Work}
+This thesis aims at answering a main research question and number of derived
+questions that can be summed up as follows:\\
+\textbf{Main Research Question:} \textit{How can distributed user interfaces be
+used within the domain of single-user recommender systems in order to enhance
+the user experience in a multi-device environment? }\\
+In order to answer this question, other research questions needed to be
+investigated:
+\begin{itemize}
+\item \textbf{Research Question 1}: \textit{In which scenarios would single
+users of recommender systems need a distributed UI?}
+\item \textbf{Research Question 2}: \textit{Which recommendation phases are best
+suited for UI distribution?}
+\item \textbf{Research Question 3}: \textit{What should be the element/unit of
+UI distribution in a recommendation application?}
+\item \textbf{Research Question 4}: \textit{What should be the span of control
+given to the user in deciding which tasks/components are to be distributed?
+And which UI distribution decision should be made by the system?}
+\item \textbf{Research Question 5}: \textit{Which UI distribution strategy is
+best suited for recommendation scenarios?}
+\end{itemize}
+
+This work is structured as follows. In chapter \ref{chapter:litreview}, basics
+and related work are presented. Next, chapter \ref{chapter:design} demonstrates
+a generic model for a distributed user interface for recommendation
+applications, as well as the high level design for a video recommendation
+application in a distributed UI multi-device environment.
+Chapter \ref{chapter:impl} explains the implementation details of the MiRec and
+DiRec mobile video recommendation prototype applications implemented for the
+user study. Chapter \ref{chapter:eval} presents the details of the conducted
+user study as well as the achieved results. Finally, chapter \ref{chapter:conc}
+provides a conclusion an discussion of our findings and possible future work. 
+
