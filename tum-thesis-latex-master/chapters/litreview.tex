@@ -242,6 +242,7 @@ approach for migrating UIs is taken by Mori et al. [41]. Blumendorf et al.
 adapt to a new interface in; specially in a multi-device environment with
 different input and output capabilities. Thevenin and Coutaz [67]  defined it as ``the capacity of a UI to withstand variations in both the device and its physical environment while preserving usability.''
 In practice, this means that a plastic interface should be able to adapt to different screen sizes (mobile device, laptop, wall-sized display), as well as to different input devices (touch, mouse, voice, gesture, etc).
+
 \subsection{Models}
 \cite{elmqvist2011distributed}However, while much research tackles problems
 that are of a DUI nature, few authors take the conceptual step to generalize these problems into models,
@@ -253,6 +254,10 @@ requirements necessary for typical DUI systems and toolkits.'' \\
 \cite{elmqvist2011distributed} First of these reference models was CAMELEON-RT,
 a middleware software infrastructure for distributed, migratable, and plastic interfaces [4, 16]. Demeure et al. [18] proposed another model in 2005, and later refined it into the 4C model in 2008 [19]. The 4C model consists of four basic components—computation, com- munication, coordination, and configuration—that captures the what, when, who, and how aspects of the distribution.
 Another approach is to combine software engineering methods with DUI models. As early as 1996, Graham et al. [24] proposed a distributed version of the model-view-controller (MVC) paradigm. Vandervelpen and Coninx [70] apply model-based methods to user interface design, similar to Mori et al. [41]) but specifically targeted at heterogeneous device environments. Luyten and Coninx [37] also target such environments, but take a bottom-up approach focused on designing user interface elements that support seamless distribution. Finally, the recent views, instruments, governors, and objects (VIGO) model [34] can be used to build distrib- uted ubiquitous instrumental interaction applications.
+
+\cite{melchior2011distribution}The problem is that the granularity of UI
+distributed elements is often coarse-grained; it is not possible to distribute
+at the widget level.\\
 
 \subsection{Design Patterns}
 \cite{vanderdonckt2010distributed} for design guidelines.\\
@@ -292,6 +297,8 @@ at both design-time and run-time with very fine and coarse- grained granularity 
 
 
 \cite{melchior69toolkit} Toolkit for\ldots
+\cite{melchior2011distribution}The domain of Distributed User Interfaces (DUI) is still in evolution and there exist no toolkit allowing the creation of DUIs.
+In most pieces of work, there is almost no genuine DUI. \\
 \cite{elmqvist2011distributed}
 DUIs toolkits are important for ubiquitous computing, where data and computation is integrated into everyday objects and activities. A workshop was held in 2001 on distributed and disappearing interfaces in ubiquitous computing [20].
 Some research in this domain focus on the hardware. The ConnecTable is a table- centric information appliance for seamless coupled/decoupled collaboration [65]. iStuff is a physical UI toolkit for UbiComp that incorporates a wide range of physical components to be used in an interactive workspace [3]. Similarly, the u-Texture [36] physical panel can be used to effortlessly build smart environments from simple and easily configurable components.

@@ -32,76 +32,51 @@ Our study identifies the need for recommendation system applications to possibly
 leverage the properties and capabilities of distributed user interfaces'
 techniques in hope of facilitating and enriching the user's experience with such systems.
 
-\section{Distributed User Interfaces}
-\subsection{Motivation for DUIs}
-
-\cite{manca2011distributing} One of the main technological trends is the
-steadily increasing number of devices per person. This has an impact on the user
-interface languages and technologies because it will be more and more common to
-interact with an application through multiple devices.\\
-
-\cite{melchior2011distribution}The domain of Distributed User Interfaces (DUI) is still in evolution and there exist no toolkit allowing the creation of DUIs.
-In most pieces of work, there is almost no genuine DUI. \\
-
-\cite{melchior2011distribution}The problem is that the granularity of UI
-distributed elements is often coarse-grained; it is not possible to distribute
-at the widget level.\\
-
-\cite{demeure20084c}With the advent of ubiquitous computing and the ever increasing amount of computing platforms, the user is confronted with more and more situations where she is invited to move from one platform to an- other
-while carrying out her interactive task, across several platforms or even with
-the platforms them- selves. The ultimate situation is when the user is carry-
-ing out a task in a physical environment where several systemsareconcurrentlyworkingondifferentphysical platforms, but forming a single task oriented user inter- face from the user’s viewpoint. All these situations rep- resent typical cases of Distributed User Interfaces (DUIs) where one or many parts or whole of one or many user interfaces are distributed in time and space depending on several parameters of the context of use, such as the user, the computing platform, and the physical environment where the task is carried out [5].\\
-
-\cite{elmqvist2011distributed}Distributed user interfaces are vital for the new
-generation of pervasive and interoperable interactive systems that will make up tomorrow’s computing environments. \\
-
-\cite{elmqvist2011distributed}The face of computing is changing. Computers can
-no longer be relied upon to double in performance and memory on a regular basis, and the reaction within the
-community has been to increasingly focus on multicore and parallel systems where
-several different (i.e., physically separated) entities work together to achieve
-a com- mon result. Distributed user interfaces can simply be seen as the natural
-reaction to the same phenomenon for HCI and interface research: if computation
-executes on distributed entities, then it is only natural that our interfaces
-should do the same. \\
-
-\cite{vanderdonckt2010distributed} DUIs attempt to surpass user interfaces that
-are manipulated only by a sin- gle end user, on the same computing platform, and
-in the same environment, with little or no varia- tions among these axes.\\
-
-\cite{vanderdonckt2010distributed} DUIs enable end users to distribute any user
-interface element, ranging from the largest one to the smallest one, across one
-or many of these dimensions at design- and/or run-time: across different users,
-across dif- ferent computing platforms, and across different physical environments. In this way, end users could be engaged in distributed tasks that are reg- ulated by distribution rules, many of them being currently used in the real world. \\
-
-\cite{vanderdonckt2010distributed} If we look back retrospectively to the
-evolution of concerns in Human-Computer Interaction (HCI) from a Software
-Engineering (SE) point of view, we can observe that several models appeared over
-time in order to address the shortcomings ob- served in the previous generation of models.\\
-
-\cite{vanderdonckt2010distributed}The consideration of one context of use at a
-time is today completely surpassed by existing situations in the real world: a
-given user is rarely working alone and is largely involved in coopera- tion and
-collaboration; a user is rarely using one single platform at a time, but several different platforms at a time or one after another, and a user is no longer staying in the same environment since she is moving from one environment to another or across environments. In addition, a same task is no longer carried out by a single user, but by a multitude of different users, simultaneously or not. All these reasons stem for considered the fact that a UI is no longer concentrated, but distribut- ed across users, platforms, and environments, the three main dimensions of UI distribution.\\
-
-\subsection{Benefits of DUI.} \cite{chen2011distributed}
-Distribution Enables Redirectable Interfaces
-In a DUI construction, interfaces can be redirected and shipped around electronically so that the user can interact using a proxy device. In our system, this has been useful for minimizing physical interactions when these interac- tions are undesirable and to allow users to effect changes without incurring the costs of device switching.
-Distribution Helps Interfaces Scale In Both Directions
-The devices available in a given environment are deter- mined by a combination
-of factors that include the avail- able infrastructure, concerns about
-portability and users' personal preferences. By allowing UIs to be broken down into distributable pieces, the UI can better accommodate both device-rich and device-starved situations. Since a DUI-based system allows users to easily multiplex UI ele- ments across devices in space or time, the system can take advantage of additional devices, while offering fallbacks (like cycling through UIs) for device-starved environments.\\
-
-\subsection{POST-WIMP/Natural UI}
-\cite{seifried2011lessons} “natural” interaction, i.e. the UI is perceived as
-something unobtrusive or even invisible that does not require the users’
-continuous attention or a great deal of cognitive resources. the design follows
-a fundamental principle of natural UIs: “the content is the interface” [6]. This means, that the amount of administrative UI controls known
-from WIMP (e.g. menus, window bars, tool bars) is minimized so that the content
-objects themselves become the first-class citizen of the UI\ldots abandoning
-traditional page- or dialog-oriented sequences of interaction (e.g. typical Web
-applications), users can act directly and flexibly on the objects of the task
-domain.\\
-
+\section{A Case for Distributed User Interfaces}
+Looking back retrospectively to the
+evolution of Distributed Systems and Human-Computer Interaction (HCI), when
+computational tasks became more and more complex to be carried out by a single computing unit unless it
+could be doubled in performance, the alternative was to rather distribute the
+tasks to be done on a network of computing devices in parallel. Distributed user interfaces
+could be thought of as the counterpart of this very idea in the area of HCI. If
+computation executes on distributed entities, then it is only natural that user
+interfaces could behave similarly.\\
+With the advancement of ubiquitous computing and the new trend of the
+ever-increasing number of devices per user, coupled with the demand for
+the inter-connectivity of these devices, users of interactive systems no longer
+perform tasks that reside mainly on a single device, but are rather confronted with situations where they have to interact with tasks across several
+platforms. A typical situation would be a user carrying out tasks in a
+multi-device environment that presents itself effectively to the user as a
+single UI, but which is actually distributed along these platforms. Such situations
+represent typical cases of Distributed User Interfaces (DUIs) where ``one or
+many parts or whole of one or many user interfaces are distributed in time and
+space depending on several parameters of the context of use, such as the user,
+the computing platform, and the physical environment where the task is carried
+out'' \cite{demeure20084c}. Hence, DUIs represent an attempt to overcome the
+limitations of user interfaces that could be manipulated by single-user, on a
+single platform, in a fixed environment, providing no variations along
+these distribution dimensions.\\
+In more concrete terms, DUIs enable end-users
+(who are rarely working alone, but collectively with other users, and who are no
+longer staying in the same locations while performing their tasks,
+simultaneously or not) ``to distribute any user interface element, ranging from
+the largest one to the smallest one, across one or many of these dimensions at
+design- and/or run-time: across different users, across different computing
+platforms, and across different physical environments. In this way, end users could be engaged in distributed tasks that are regulated by distribution rules, many of them being currently used in the real world.'' \cite{vanderdonckt2010distributed}\\
+Moreover, in a POST-WIMP(menus, windows, tool bars) era, there is a call for new
+methods of interaction with UIs that overpasses the traditional page or dialog
+oriented methods \cite{seifried2011lessons}. For example, Natural UIs [6!]
+define the content to be the actual interface with which the user could flexibly and directly interact through simple gestures. DUIs inherit such
+concepts and thus become candidate to replace more obsolete methods of
+interaction.\\
+Evidently, UIs could no longer be thought of as concentrated, but rather as
+distributed across users, platforms, and environments, the three main dimensions
+of UI distribution. The new demand that DUIs have served in how user interfaces
+could evolve to meet the challenges of the increasingly distributed computer
+systems, as well as in providing fluid and naturalisitc methods of interaction
+with graphical systems, makes a case for the integration of distributed user
+interfaces in the new generation of pervasive and interoperable interactive
+systems.
 \section{Scope and Limitations}
 Our study is concerned with the application of distributed user interfaces in
 single-user recommender systems. Our claim is that the distribution of
