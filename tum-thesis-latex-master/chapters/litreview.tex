@@ -1,6 +1,9 @@
 \chapter{Background and Related Work}\label{chapter:litreview}
+In this section we provide the basics and background information in the area of
+distributed user interfaces and their application methods in different types of
+interactive systems, and further on, their attempted application in the area of
+group recommendation systems.
 \section{Distributed User Interfaces: Fundamentals, Approaches and Challenges}
-Overall definition of DUI and intro for subsection...
 \subsection{Fundamentals of DUIs: Definitions, Dimensions and Properties}
 \subsubsection{Definitions of DUIs}
 Despite of the relative sparsity of applications for DUIs, the literature
@@ -243,82 +246,69 @@ adapt to a new interface in; specially in a multi-device environment with
 different input and output capabilities. Thevenin and Coutaz [67]  defined it as ``the capacity of a UI to withstand variations in both the device and its physical environment while preserving usability.''
 In practice, this means that a plastic interface should be able to adapt to different screen sizes (mobile device, laptop, wall-sized display), as well as to different input devices (touch, mouse, voice, gesture, etc).
 
-\subsection{Models}
-\cite{elmqvist2011distributed}However, while much research tackles problems
-that are of a DUI nature, few authors take the conceptual step to generalize these problems into models,
-frameworks, and toolkits supporting DUI development. \\
-\cite{demeure20084c} the 4C model
-\cite{melchior2011distributed} model-based approach -> mention if needed
-\cite{elmqvist2011distributed} ``capture the abstract operations and 
-requirements necessary for typical DUI systems and toolkits.'' \\
-\cite{elmqvist2011distributed} First of these reference models was CAMELEON-RT,
-a middleware software infrastructure for distributed, migratable, and plastic interfaces [4, 16]. Demeure et al. [18] proposed another model in 2005, and later refined it into the 4C model in 2008 [19]. The 4C model consists of four basic components—computation, com- munication, coordination, and configuration—that captures the what, when, who, and how aspects of the distribution.
-Another approach is to combine software engineering methods with DUI models. As early as 1996, Graham et al. [24] proposed a distributed version of the model-view-controller (MVC) paradigm. Vandervelpen and Coninx [70] apply model-based methods to user interface design, similar to Mori et al. [41]) but specifically targeted at heterogeneous device environments. Luyten and Coninx [37] also target such environments, but take a bottom-up approach focused on designing user interface elements that support seamless distribution. Finally, the recent views, instruments, governors, and objects (VIGO) model [34] can be used to build distrib- uted ubiquitous instrumental interaction applications.
+\subsection{DUIS: Models, Toolkits, Frameworks, and Studies}
+While much research tackles problems that are of a DUI nature, few authors take
+the conceptual step to generalize these problems into models, frameworks, and
+toolkits supporting DUI development \cite{elmqvist2011distributed}. In this
+section, we survey some of the studies that aimed at providing DUI models,
+design guidelines, frameworks, applications and toolkits, as well as a reference
+to some of the existing DUI systems.\\
 
-\cite{melchior2011distribution}The problem is that the granularity of UI
-distributed elements is often coarse-grained; it is not possible to distribute
-at the widget level.\\
+When it comes to DUI models, an early model was proposed by Demeure et al. in
+2005 and then refined in 2008 \cite{demeure20084c} into the 4C model which is
+perhaps the most well known and widely
+referenced in most studies. The 4C model consists of four basic
+components—computation, com- munication, coordination, and configuration—that captures the what, when, who, and how aspects of the distribution. Melchior et al. \cite{melchior2011distributed} propose a model-based approach that ``capture the abstract operations and
+requirements necessary for typical DUI systems and toolkits.'' One of the earliest reference models for DUI is the CAMELEON-RT which is a
+middleware software infrastructure for distributed, migratable, and plastic interfaces [4, 16]. 
+Another approach is to combine software engineering methods with DUI models. As early as 1996, Graham et al. [24] proposed a distributed version of the model-view-controller (MVC) paradigm. Vandervelpen and Coninx [70] apply model-based methods to user interface design, similar to Mori et al. [41]) but specifically targeted at heterogeneous device environments. Luyten and Coninx [37] also target such environments, but take a bottom-up approach focused on designing user interface elements that support seamless distribution. Finally, the recent views, instruments, governors, and objects (VIGO) model [34] can be used to build distributed ubiquitous instrumental interaction applications.
 
-\subsection{Design Patterns}
-\cite{vanderdonckt2010distributed} for design guidelines.\\
-\cite{seifried2011lessons} design patterns and anti patterns.
-
-\subsection{Frameworks}
-
-\subsection{Applications}
-Add if needed -> \cite{demeure20084c} CamNote and  Sedan-Boullion Tourist
-application
-
-\subsection{Approaches: How to do things!!}
-\cite{manca2011distributing} describes a model-based approach for the desciption
-of DUI on top of an extension of the MARIA language. The study explains that
-there are 4 levels at which the distrution could occur: elements could be
-distributed accross multiple devices, elements could be assigned to one given
+Manca et al. \cite{manca2011distributing} describes a model-based approach for
+the desciption of DUI on top of an extension of the MARIA language. The study explains that
+there are 4 levels at which the distribution could occur: elements could be
+distributed across multiple devices, elements could be assigned to one given
 device, elements could be replicated in multiple devices, or elements could be
 by either one device or another. (here we could see which approach. sometime we
-replicate and sometimes we choose one device.)
+replicate and sometimes we choose one device.)\\
 
-\cite{froberg2011model} defines the MARVE framework for building DUI
-systems. The goal is to provide an approach as simsilar as possible to
+Froberg et al. \cite{froberg2011model} defines the MARVE framework for building
+DUI systems. The goal is to provide an approach as similar as possible to
 the traditional way of ui components placement, allowing for a smooth
 transition from GUI to DUI development. (we could mention the systems
-developed using MARVE). Similarily, presentaion modes are defined for components
-atomic presentation refers to when a component can only be visible on a single
-device at a time, mirrored refers when a component is palced on two or more
+developed using MARVE). Similarly, presentation modes are defined for
+components atomic presentation refers to when a component can only be visible on a single
+device at a time, mirrored refers when a component is placed on two or more
 devices at any given time, and cloned presentations refers when a component is
-placed on two or more devices at any given time, but each com- ponent is unique
+placed on two or more devices at any given time, but each component is unique
 and not interconnected with the source component.\\
 
-The ZOIL design paradigm \cite{jetter2012design}
+Jetter et al. \cite{jetter2012design} propose the ZOIL design paradigm for
+DUIs.\\
  
-\subsection{Toolkits}
-\cite{melchior2011distribution} provides a toolkit to support distribution
-at both design-time and run-time with very fine and coarse- grained granularity and to support replicable distribution while being compliant with the DUI goals as in [5]. This paper tends to help understanding and managing DUI.\\
+The domain of Distributed User Interfaces (DUI) is still in evolution and there exist no toolkit allowing the creation of DUIs.
+In most pieces of work, there is almost no genuine
+DUI.\cite{melchior2011distribution}. DUIs toolkits are important for ubiquitous computing, where data and computation is integrated into everyday objects and activities.\cite{elmqvist2011distributed}\\
+Melchior et al. \cite{melchior69toolkit} provides a toolkit to support
+distribution at both design-time and run-time with very fine and coarse- grained granularity and to support replicable distribution while being compliant with the DUI goals as in [5].\\
 
-
-\cite{melchior69toolkit} Toolkit for\ldots
-\cite{melchior2011distribution}The domain of Distributed User Interfaces (DUI) is still in evolution and there exist no toolkit allowing the creation of DUIs.
-In most pieces of work, there is almost no genuine DUI. \\
-\cite{elmqvist2011distributed}
-DUIs toolkits are important for ubiquitous computing, where data and computation is integrated into everyday objects and activities. A workshop was held in 2001 on distributed and disappearing interfaces in ubiquitous computing [20].
-Some research in this domain focus on the hardware. The ConnecTable is a table- centric information appliance for seamless coupled/decoupled collaboration [65]. iStuff is a physical UI toolkit for UbiComp that incorporates a wide range of physical components to be used in an interactive workspace [3]. Similarly, the u-Texture [36] physical panel can be used to effortlessly build smart environments from simple and easily configurable components.
-4 N. Elmqvist
-While hardware aspects are important, the software architecture is particularly critical. The BEACH system [64] is one such infrastructure and was used for the ConnecTable project. Aura [58] is a software architecture for supporting dynamic variability of computational resources in UbiComp environments. Similarly, the Gaia [56] middleware infrastructure supports resource management in physical and interactive computing spaces (called Active Spaces). Additional frameworks include MediaBroker [39, 40], a recent toolkit for building peer-to-peer DUIs [38], and a visualization toolkit for distributed collaboration [33].
-
-
-\subsection{Studies?}
-\cite{vanderdonckt2010distributed} Beale & Edmondson [4] conducted user sur-
-veys to determine the user behavior induced by using a DUI: they identified the
-importance of having multiple carets and the complexity of mul- ti-tasking and
+A number of user surveys were conducted in various studies to investigate users
+interaction with DUIs. \cite{vanderdonckt2010distributed} Beale & Edmondson [4]
+conducted user surveys to determine the user behavior induced by using a DUI: they identified the importance of having multiple carets and the complexity of multi-tasking and
 they suggest design implications for using DUIs in order to support distributed
-tasks. In particular, they stressed the importance of a multi-tasking model that is partially built at the local level of a single user and at the global level across users when collaboration exists. The global scenario should be also dissolved into local sce- nario in order to preserve the consistency between common tasks and individual tasks.\\\
- 
-\cite{vanderdonckt2010distributed} Tan & Czewinsky [23] found out that physical
-discontinuities had no effect on performance, but found a detrimental effect from separating infor- mation within the visual field, when also separat- ed by depth. Due to the multiplicity of interaction techniques in DUIs, Nacenta et al. conducted a study to compare the efficiency of six techniques for moving objects from a platform (e.g., a tablet) to another one (e.g., a tabletop) in four different distance ranges and with three movement direc- tions. Their study suggests that spatial manipula- tion of data was faster than pressure-based tech- niques.\\
+tasks. In particular, they stressed the importance of a multi-tasking model that
+is partially built at the local level of a single user and at the global level
+across users when collaboration exists. The global scenario should be also
+dissolved into local scenario in order to preserve the consistency between
+common tasks and individual tasks.\\ \cite{vanderdonckt2010distributed} Tan & Czewinsky [23] found out that physical discontinuities had no effect on performance, but found a detrimental effect from separating information within the visual field, when also separated by depth. Due to the multiplicity of interaction techniques in DUIs, Nacenta et al. conducted a study to compare the efficiency of six techniques for moving objects from a platform (e.g., a tablet) to another one (e.g., a tabletop) in four different distance ranges and with three movement direc- tions. Their study suggests that spatial manipula- tion of data was faster than pressure-based tech- niques.\\
 
-\subsection{Exsiting DUI Systems}
 \cite{demeure20084c} One the one hand, several DUI systems exist such as IAM
 [6], i-Land [17], Stanford Interactive Mural [11], Aura [16], ConnecTables [18,19], Dygimes [20], DistriXML [9].
+\cite{elmqvist2011distributed} The ConnecTable is a table- centric information appliance for seamless coupled/decoupled collaboration [65]. iStuff is a physical UI toolkit for UbiComp that incorporates a wide range of physical components to be used in an interactive workspace [3]. Similarly, the u-Texture [36] physical panel can be used to effortlessly build smart environments from simple and easily configurable components.
+4 N. Elmqvist. The BEACH system [64] is one such infrastructure and was used for
+the ConnecTable project. Aura [58] is a software architecture for supporting dynamic variability of computational resources in UbiComp environments. Similarly, the Gaia [56] middleware infrastructure supports resource management in physical and interactive computing spaces (called Active Spaces). Additional frameworks include MediaBroker [39, 40], a recent toolkit for building peer-to-peer DUIs [38], and a visualization toolkit for distributed collaboration [33].
+
+Moreover, a number of studies \cite{seifried2011lessons},
+\cite{vanderdonckt2010distributed} consider the challenging task developers of DUIs face and a offer a number of design guidlines, patterns and anti-patterns that should be considered on designing interfaces for distributed in multi-device environemnts.A number of studies provide Design Patterns\\
 
 \subsection{Dual Display:LD/SD}
 The whole section is taken from \cite{kaviani2011dual}
@@ -358,9 +348,7 @@ distributed across the mobile and large displays.\\
 
 the use of gestures -> cite woerndl\\
 
-Usability in DUIs -> cite more from 2nd conference \\
-
-\subsection{Challenges and Concerns}
+\subsection{Challenges and Concerns of DUIs}
 Concerns for UI distribution decribed in \cite{melchior2011distributed} Concern #1. Development of distributed user inter- faces: the development of DUI is not supported by usual tools. Most of the time, developers have to man- age the development in their own way. A lot of time is spent on the development of DUIs mostly the distrib- uted aspects.
 􏰀 Concern #2. Support for distribution of user interfaces at running time: existing DUIs are limited to predefined applications and domains of application which lead to little support for the various possibilities of distribution.
 􏰀 Concern #3. Support for multi-user collaboration: mul- ti-user applications are developed in different ways de-
@@ -370,6 +358,19 @@ of a common base is slowing down the development.
 􏰀 Concern #5. Network transparency: The distribution of the UIs has to be network transparent in the sense that the user should not have to worry about network details such as IP address, user network and network settings.
 􏰀 Concern #6. Lack of description of the distributed do- main and models: The researches around multi-user ap- plications and distributed user interfaces are very spe- cifics to the needs of the developers and are almost never documented or badly documented.
 Model-based Approach. .\\
+
+
+\cite{melchior2011distribution}The problem is that the granularity of UI
+distributed elements is often coarse-grained; it is not possible to distribute
+at the widget level.\\
+
+???Benefits of DUI \cite{chen2011distributed}\\
+Distribution Enables Redirectable Interfaces
+In a DUI construction, interfaces can be redirected and shipped around electronically so that the user can interact using a proxy device. In our system, this has been useful for minimizing physical interactions when these interac- tions are undesirable and to allow users to effect changes without incurring the costs of device switching.
+Distribution Helps Interfaces Scale In Both Directions
+The devices available in a given environment are deter- mined by a combination
+of factors that include the avail- able infrastructure, concerns about
+portability and users' personal preferences. By allowing UIs to be broken down into distributable pieces, the UI can better accommodate both device-rich and device-starved situations. Since a DUI-based system allows users to easily multiplex UI ele- ments across devices in space or time, the system can take advantage of additional devices, while offering fallbacks (like cycling through UIs) for device-starved environments.\\
 
 
 \section{Recommender Systems}
