@@ -141,9 +141,9 @@ task. Lopez et al. \cite{lopez2011formal} defines a task in this context ``as th
 set of actions the user performs to accomplish an objective."
 Vanderdonckt et al. \cite{vanderdonckt2010distributed} mention that 
 to be fully distributed, ``one or many tasks should be considered to be
-carried out simultaneously or not in a distributed way.''  Luyten et al. [17,18] introduced the notion of situated task in
-order to model how a task could be distributed into several sub-tasks to be
-carried out by one user, but on different platforms in the same environment
+carried out simultaneously or not in a distributed way.''  Luyten et al.
+\cite{luyten2006designing} introduced the notion of situated task in order to model how a task
+could be distributed into several sub-tasks to be carried out by one user, but on different platforms in the same environment
 over time.
 
 \paragraph{Time.} The time dimension is another crucial aspect of distribution
@@ -237,14 +237,15 @@ constraints imposed by the user’s task corresponding to the container''.\cite{
 such that an abstraction layer redirects parts or the whole of the interface
 along the application's hosts. Different techniques are used to achieve
 migratability. For instance, one that is similar to what we use in our study is
-what is used by Bandelloni and Paterno [5] use a migration server to replicate
+what is used by Bandelloni and Paterno \cite{bandelloni2004flexible} use a migration server to replicate
 the runtime state and adapt the interface accordingly. Whereas a model based
-approach for migrating UIs is taken by Mori et al. [41]. Blumendorf et al.
-\cite{blumendorf2011distributed} refer to complete versus partial migration/replication, where only part of the UI is involved.
+approach for migrating UIs is taken by Mori et al. \cite{mori2004design}.
+Blumendorf et al. \cite{blumendorf2011distributed} refer to complete versus
+partial migration/replication, where only part of the UI is involved.
 \paragraph{Plasticity.} is the ability of a UI to
 adapt to a new interface in; specially in a multi-device environment with
-different input and output capabilities. Thevenin and Coutaz [67]  defined it as ``the capacity of a UI to withstand variations in both the device and its physical environment while preserving usability.''
-In practice, this means that a plastic interface should be able to adapt to different screen sizes (mobile device, laptop, wall-sized display), as well as to different input devices (touch, mouse, voice, gesture, etc).
+different input and output capabilities. Thevenin and Coutaz \cite{thevenin1999plasticity} defined
+it as ``the capacity of a UI to withstand variations in both the device and its physical environment while preserving usability.'' In practice, this means that a plastic interface should be able to adapt to different screen sizes (mobile device, laptop, wall-sized display), as well as to different input devices (touch, mouse, voice, gesture, etc).
 
 \subsection{DUIS: Models, Toolkits, Frameworks, and Studies}
 While much research tackles problems that are of a DUI nature, few authors take
@@ -258,10 +259,21 @@ When it comes to DUI models, an early model was proposed by Demeure et al. in
 2005 and then refined in 2008 \cite{demeure20084c} into the 4C model which is
 perhaps the most well known and widely
 referenced in most studies. The 4C model consists of four basic
-components—computation, com- munication, coordination, and configuration—that captures the what, when, who, and how aspects of the distribution. Melchior et al. \cite{melchior2011distributed} propose a model-based approach that ``capture the abstract operations and
-requirements necessary for typical DUI systems and toolkits.'' One of the earliest reference models for DUI is the CAMELEON-RT which is a
-middleware software infrastructure for distributed, migratable, and plastic interfaces [4, 16]. 
-Another approach is to combine software engineering methods with DUI models. As early as 1996, Graham et al. [24] proposed a distributed version of the model-view-controller (MVC) paradigm. Vandervelpen and Coninx [70] apply model-based methods to user interface design, similar to Mori et al. [41]) but specifically targeted at heterogeneous device environments. Luyten and Coninx [37] also target such environments, but take a bottom-up approach focused on designing user interface elements that support seamless distribution. Finally, the recent views, instruments, governors, and objects (VIGO) model [34] can be used to build distributed ubiquitous instrumental interaction applications.
+components—computation, communication, coordination, and configuration—that captures the what, when, who, and how aspects of the distribution. Melchior et al. \cite{melchior2011distributed} propose a model-based approach that ``capture the abstract operations and
+requirements necessary for typical DUI systems and toolkits.'' One of the
+earliest reference models for DUI is the CAMELEON-RT \cite{coutaz2003software} which is a
+middleware software infrastructure for distributed, migratable, and plastic
+interfaces cite \cite{balme2004cameleon}.
+Another approach is to combine software engineering methods with DUI models. As
+early as 1996, Graham et al. \cite{graham1996efficient} proposed a distributed version of the
+model-view-controller (MVC) paradigm. Vandervelpen and Coninx
+\cite{vandervelpen2004towards} apply model-based methods to user interface
+design, similar to Mori et al. \cite{mori2004design}, but specifically targeted
+at heterogeneous device environments. Luyten and Coninx \cite{luyten2006designing} also target
+such environments, but take a bottom-up approach focused on designing user
+interface elements that support seamless distribution. Finally, the recent
+views, instruments, governors, and objects (VIGO) model \cite{klokmose2009vigo} can be used
+to build distributed ubiquitous instrumental interaction applications.
 
 Manca et al. \cite{manca2011distributing} describes a model-based approach for
 the desciption of DUI on top of an extension of the MARIA language. The study explains that
@@ -289,26 +301,39 @@ The domain of Distributed User Interfaces (DUI) is still in evolution and there 
 In most pieces of work, there is almost no genuine
 DUI.\cite{melchior2011distribution}. DUIs toolkits are important for ubiquitous computing, where data and computation is integrated into everyday objects and activities.\cite{elmqvist2011distributed}\\
 Melchior et al. \cite{melchior69toolkit} provides a toolkit to support
-distribution at both design-time and run-time with very fine and coarse- grained granularity and to support replicable distribution while being compliant with the DUI goals as in [5].\\
+distribution at both design-time and run-time with very fine and coarse- grained granularity and to support replicable distribution while being compliant with the DUI goals as in.\\
 
 A number of user surveys were conducted in various studies to investigate users
-interaction with DUIs. \cite{vanderdonckt2010distributed} Beale & Edmondson [4]
-conducted user surveys to determine the user behavior induced by using a DUI: they identified the importance of having multiple carets and the complexity of multi-tasking and
-they suggest design implications for using DUIs in order to support distributed
+interaction with DUIs. \cite{vanderdonckt2010distributed} Beale & Edmondson
+\cite{beale2007multiple} conducted user surveys to determine the user behavior
+induced by using a DUI:
+they identified the importance of having multiple carets and the complexity of multi-tasking and they suggest design implications for using DUIs in order to support distributed
 tasks. In particular, they stressed the importance of a multi-tasking model that
 is partially built at the local level of a single user and at the global level
 across users when collaboration exists. The global scenario should be also
 dissolved into local scenario in order to preserve the consistency between
-common tasks and individual tasks.\\ \cite{vanderdonckt2010distributed} Tan & Czewinsky [23] found out that physical discontinuities had no effect on performance, but found a detrimental effect from separating information within the visual field, when also separated by depth. Due to the multiplicity of interaction techniques in DUIs, Nacenta et al. conducted a study to compare the efficiency of six techniques for moving objects from a platform (e.g., a tablet) to another one (e.g., a tabletop) in four different distance ranges and with three movement direc- tions. Their study suggests that spatial manipula- tion of data was faster than pressure-based tech- niques.\\
+common tasks and individual tasks. Tan & Czewinsky \cite{tan2003effects} found
+out that physical discontinuities had no effect on performance, but found a detrimental effect from separating information within the visual field, when also separated by depth. Due to the multiplicity of interaction techniques in DUIs, Nacenta et al. conducted a study to compare the efficiency of six techniques for moving objects from a platform (e.g., a tablet) to another one (e.g., a tabletop) in four different distance ranges and with three movement directions. Their study suggests that spatial manipulation of data was faster than pressure-based techniques.\\
 
-\cite{demeure20084c} One the one hand, several DUI systems exist such as IAM
-[6], i-Land [17], Stanford Interactive Mural [11], Aura [16], ConnecTables [18,19], Dygimes [20], DistriXML [9].
-\cite{elmqvist2011distributed} The ConnecTable is a table- centric information appliance for seamless coupled/decoupled collaboration [65]. iStuff is a physical UI toolkit for UbiComp that incorporates a wide range of physical components to be used in an interactive workspace [3]. Similarly, the u-Texture [36] physical panel can be used to effortlessly build smart environments from simple and easily configurable components.
-4 N. Elmqvist. The BEACH system [64] is one such infrastructure and was used for
-the ConnecTable project. Aura [58] is a software architecture for supporting dynamic variability of computational resources in UbiComp environments. Similarly, the Gaia [56] middleware infrastructure supports resource management in physical and interactive computing spaces (called Active Spaces). Additional frameworks include MediaBroker [39, 40], a recent toolkit for building peer-to-peer DUIs [38], and a visualization toolkit for distributed collaboration [33].
+On the one hand, several researches have found DUI
+techniques useful to adopt it into building DUI systems such as IAM
+\cite{coutaz2003software}, i-Land \cite{streitz1999land}, Stanford Interactive
+Mural \cite{guimbretiere2001fluid}, Aura \cite{sousa2002aura}, ConnecTables
+\cite{tandler2001connectables} , Dygimes \cite{vandervelpen2004towards},
+DistriXML \cite{grolaux2004migratable}. The ConnecTable is a table-centric
+information appliance for seamless coupled/decoupled collaboration
+\cite{tandler2001connectables}. iStuff is a physical UI toolkit for UbiComp that
+incorporates a wide range of physical components to be used in an interactive
+workspace \cite{ballagas2003istuff}. Similarly, the u-Texture \cite{kohtake2005u}
+physical panel can be used to effortlessly build smart environments from simple
+and easily configurable components. Aura \cite{sousa2002aura} is a software architecture for supporting dynamic variability of computational resources in UbiComp environments.
+Similarly, the Gaia \cite{roman2002middleware} middleware infrastructure supports resource
+management in physical and interactive computing spaces (called Active Spaces). Additional
+frameworks include MediaBroker \cite{modahl2004mediabroker}.\\
 
 Moreover, a number of studies \cite{seifried2011lessons},
-\cite{vanderdonckt2010distributed} consider the challenging task developers of DUIs face and a offer a number of design guidlines, patterns and anti-patterns that should be considered on designing interfaces for distributed in multi-device environemnts.A number of studies provide Design Patterns\\
+\cite{vanderdonckt2010distributed} consider the challenging task developers of
+DUIs face and a offer a number of design guidelines, patterns and anti-patterns that should be considered on designing interfaces for distributed in multi-device environemnts.A number of studies provide Design Patterns\\
 
 \subsection{Dual Display:LD/SD}
 The whole section is taken from \cite{kaviani2011dual}
@@ -346,7 +371,9 @@ four different ways that interactive and non-interactive widgets can be
 distributed across the mobile and large displays.\\
 
 
-the use of gestures -> cite woerndl\\
+the use of gestures -> cite woerndl \cite{woerndl2012combining}\\
+
+Mention twitter search \cite{radle2013twistersearch}
 
 \subsection{Challenges and Concerns of DUIs}
 Concerns for UI distribution decribed in \cite{melchior2011distributed} Concern #1. Development of distributed user inter- faces: the development of DUI is not supported by usual tools. Most of the time, developers have to man- age the development in their own way. A lot of time is spent on the development of DUIs mostly the distrib- uted aspects.
@@ -377,4 +404,4 @@ portability and users' personal preferences. By allowing UIs to be broken down i
 Tasks
 
 \section{DUI in Recommender Systems}
-nothing except: cite the group recommendation system
+nothing except: cite the group recommendation system \cite{worndlvoting}
