@@ -119,8 +119,17 @@ The presentation of recommended video casts is shown in parallel on the SD and L
 \subsubsection{Recommended Item Details Presentation}
 For presenting the user with detailed information about the recommended videos, the recommendation list offers a link to a detailed information page on the mobile device in a master-detail fashion. As the user clicks on the item in the list, the user enters the detailed information page on the mobile device.\\
 Before loading the details-view for the first time in on the SD, the user is prompted with a dialogue asking if he/she would like to redirect the details view to be displayed on the LD, or to show the details in parallel on both displays. Later, the user is also asked if this configuration is to be saved for later use. Based on the user's choice, the details view is either loaded on the SD or LD or both.\\
-Alternatively, the user could be the initiator for the UI distribution by deciding to redirect the content as the need is detected. As shown in figure \ref{fig:figure38} content redirection is possible for viewing details information on the LD by applying a simple swipe-right gesture on any of the video items on the SD list. Consequently, the video details content will be redirected to be displayed in parallel on the LD.   
-    
+Alternatively, the user could be the initiator for the UI distribution by
+deciding to redirect the content as the need is detected. As shown in figure
+\ref{fig:figure38} content redirection is possible for viewing details information on the LD by applying a simple swipe-right gesture on any of the video items on the SD list. Consequently, the video details content will be redirected to be displayed in parallel on the LD.\\ 
+Moreover, in our proposed design, we offer the possibility of distributing parts
+of the UI with a fine granularity. The user selects a single table-cell in the
+videos list and could move it to the LD by applying the gesture, as opposed to
+just mirroring or transferring the UI at a more coarse granularity.
+Melchior et al. \cite{melchior2011distribution} points out that the problem is
+that the granularity of UI distributed elements is often coarse-grained; it is
+not possible to distribute at the widget level. We argue that our design
+overcomes this problem.\\
 \subsubsection{Recommended Item Consumption}
 Similar to the recommended item details scenario, item consumption redirection is also given as an option to the user by asking the user if redirecting item consumption to the LD is his/her preferred option or if it should the content should be played on the SD, and saving this configuration for later use. Consequently, if the user selects to consume the content on the LD, playing the recommended videos is done as depicted by figure \ref{fig:figure36}. On the video details page, the user performs a pan gesture on the video image,  which then triggers the migration of the video consumption from the mobile device to the LD. The video player automatically stars on the LD, providing the user with all controls for the video playback.  
 \begin{figure}[h!]

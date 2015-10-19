@@ -298,8 +298,9 @@ Jetter et al. \cite{jetter2012design} propose the ZOIL design paradigm for
 DUIs.\\
  
 The domain of Distributed User Interfaces (DUI) is still in evolution and there exist no toolkit allowing the creation of DUIs.
-In most pieces of work, there is almost no genuine
-DUI.\cite{melchior2011distribution}. DUIs toolkits are important for ubiquitous computing, where data and computation is integrated into everyday objects and activities.\cite{elmqvist2011distributed}\\
+In most pieces of work, ``there is almost no genuine
+DUI" \cite{melchior2011distribution}. DUIs toolkits are important for ubiquitous
+computing, where data and computation is integrated into everyday objects and activities.\cite{elmqvist2011distributed}\\
 Melchior et al. \cite{melchior69toolkit} provides a toolkit to support
 distribution at both design-time and run-time with very fine and coarse- grained granularity and to support replicable distribution while being compliant with the DUI goals as in.\\
 
@@ -314,9 +315,13 @@ across users when collaboration exists. The global scenario should be also
 dissolved into local scenario in order to preserve the consistency between
 common tasks and individual tasks. Tan & Czewinsky \cite{tan2003effects} found
 out that physical discontinuities had no effect on performance, but found a detrimental effect from separating information within the visual field, when also separated by depth. Due to the multiplicity of interaction techniques in DUIs, Nacenta et al. conducted a study to compare the efficiency of six techniques for moving objects from a platform (e.g., a tablet) to another one (e.g., a tabletop) in four different distance ranges and with three movement directions. Their study suggests that spatial manipulation of data was faster than pressure-based techniques.\\
-
-On the one hand, several researches have found DUI
-techniques useful to adopt it into building DUI systems such as IAM
+In the area of social search, Raedle et al. \cite{radle2013twistersearch}
+believe that POST-WIMP DUIs could help better support the area of collaborative
+social search, and consequently, successfully used DUI design principles to 
+develop a prototype, TwitterSearch, which was tested in a user study. Their
+results indicated the success of their hypothesis.
+On the one hand, several researches have
+found DUI techniques useful to adopt it into building DUI systems such as IAM
 \cite{coutaz2003software}, i-Land \cite{streitz1999land}, Stanford Interactive
 Mural \cite{guimbretiere2001fluid}, Aura \cite{sousa2002aura}, ConnecTables
 \cite{tandler2001connectables} , Dygimes \cite{vandervelpen2004towards},
@@ -330,78 +335,81 @@ and easily configurable components. Aura \cite{sousa2002aura} is a software arch
 Similarly, the Gaia \cite{roman2002middleware} middleware infrastructure supports resource
 management in physical and interactive computing spaces (called Active Spaces). Additional
 frameworks include MediaBroker \cite{modahl2004mediabroker}.\\
-
 Moreover, a number of studies \cite{seifried2011lessons},
 \cite{vanderdonckt2010distributed} consider the challenging task developers of
 DUIs face and a offer a number of design guidelines, patterns and anti-patterns that should be considered on designing interfaces for distributed in multi-device environemnts.A number of studies provide Design Patterns\\
 
-\subsection{Dual Display:LD/SD}
-The whole section is taken from \cite{kaviani2011dual}
+\subsection{Adopting Dual-Display ``LD/SD'' for UI Distribution}
+Dual-Display (shortly LD/SD display) is a distribution approach that we adopt in
+our study and which was explained and adopted by a similar study by Kaviani et al.
+\cite{kaviani2011dual}. Kaviani describes the approach as a promising approach
+in interacting with large public displays has been the use of ubiquitous cell phones which not only offer a means to interact with displays, but increasingly offer a small, but high quality screen to complement
+the larger public display. Extending interactive large displays (LD) with small
+devices (SD) such as PDAs or smart phones has been discussed in earlier research
+\cite{dix2008public}. The main idea behind this approach, is to execute a user
+interface across LD and SD to take advantage of input and output capabilities of
+both device types at the same time. Dix and Sas \cite{dix2008public} argue that
+such an approach could help designers to solve GUI design issues due to
+multi-user interaction with large public displays. 
 
-A promising approach in interacting with large public displays has been the use
-of ubiquitous cell phones which not only offer a means to interact with
-displays, but increasingly offer a small, but high quality screen to complement
-the larger public display.\\
+The goal of Kaviani et al.'s study is similar to ours i trying to figure out
+the effect of using such approach for UI distribution on users' experiences.
+Their primary research question is to verify if users benefit from executing an application across large displays and small devices taking advantage of input
+and output capabilities of both devices, i.e. LD and SD. In other words to understand if and how splitting interface entities (user interface widgets) across LD and SD affects user task performance when interacting with applications designed for large public displays.\\
 
-Extending interactive large displays (LD) with small devices (SD) such as PDAs
-or smart phones has been discussed in earlier research efforts [3, 6]. The main
-idea behind this approach, which is also known as the Dual Display approach [2],
-is to execute a user interface across LD and SD to take advantage of input and
-output capabilities of both device types at the same time. Dix and Sas [3] argue
-that such an approach could help designers to solve GUI design issues due to multi-user interaction with large public displays.\\
+A similar concern to what unfolded during our study was also mentioned in
+Kaviani et al.'s study: Which UI components to show on LD and which on SD, and
+when to use both. Current research work with large public displays rests on the
+assumption that interaction feedback and user requested information (output data) can be presented on LD, SD, or a combination of both. Furthermore, it is assumed that
+coupling LD with SD during interaction helps to reduce the load of information
+presentation on the LD and increases users’ ability to manage content on large
+displays, mainly because of users’ inherent experience in using their phones. What seems to be missing from the current research work is identifying differences in design requirements for interactive and non-interactive widgets depending on whether they are placed on LD or SD. There is lack of clear guidelines on how users respond to placement of elements in a user interface on LD or SD.\\ At the widget level, they in short sum it up as: To free up real estate on LD,
+use SD. For multi-user interaction use LD. A mirrored approach introduces
+redundancy (which might or might not be useful) and solves neither problem
+(real estate / interaction).\\
 
-What to show on LD/SD\\
-Current research work with large public displays rests on the assumption that
-interaction feedback and user requested information (output data) can be
-presented on LD, SD, or a combination of both. Furthermore, it is assumed that
-coupling LD with SD during interaction helps to reduce the load of information presentation on the LD and increases users’ ability to manage content on large displays, mainly because of users’ inherent experience in using their phones. What seems to be missing from the current research work is identifying differences in design requirements for interactive and non-interactive widgets depending on whether they are placed on LD or SD. There is lack of clear guidelines on how users respond to placement of elements in a user interface on LD or SD.\\
-
-Simlar Goal to our study!\\
-Our primary research question is to verify if users benefit from executing an
-application across large displays and small devices taking advantage of input
-and output capabilities of both devices, i.e. LD and SD. In other words we would
-like to understand if and how splitting interface entities (user interface widgets) across LD and SD affects user task performance when interacting with applications designed for large public displays.\\
-
-Which widgets to show on which display. LD, SD, LD-SD. To free up resl estate on
-LD, use SD.
-For multi-user interaction use LD. Mirrored mode: redundancy and solves neither
-problem.\\
-Building on top of Norman’s seven stage model of interaction, we have identified
-four different ways that interactive and non-interactive widgets can be
-distributed across the mobile and large displays.\\
-
-
-the use of gestures -> cite woerndl \cite{woerndl2012combining}\\
-
-Mention twitter search \cite{radle2013twistersearch}
+\subsection{The Use of Gestures for Content Redirection}
+For content redirection between SD and LD, we rely mainly on the use of
+gesture on UI objects. Allowing the user to perform a simple gestures such as
+panning, swiping, scaling, rotating on virtual UI object instead, of having to
+follow a menu or dialogue to perform it, inherits a POST-WIMP DUIs
+approach, where content is considered the interface. It also according to 
+Woerndl et al. \cite{woerndl2012combining} is said to reduce cognitive overhead, hence, makes the task easier.
 
 \subsection{Challenges and Concerns of DUIs}
-Concerns for UI distribution decribed in \cite{melchior2011distributed} Concern #1. Development of distributed user inter- faces: the development of DUI is not supported by usual tools. Most of the time, developers have to man- age the development in their own way. A lot of time is spent on the development of DUIs mostly the distrib- uted aspects.
-􏰀 Concern #2. Support for distribution of user interfaces at running time: existing DUIs are limited to predefined applications and domains of application which lead to little support for the various possibilities of distribution.
-􏰀 Concern #3. Support for multi-user collaboration: mul- ti-user applications are developed in different ways de-
-pending on the use and domain of application. The lack
+Given the above description of what entails building and using
+distributed user interfaces, some challenges and concerns are faced
+with the development and application of such systems. Some  OF these concerns
+are cited in \cite{melchior2011distributed}:\\ 
+\begin{itemize}
+ \item Development of distributed user inter- faces: the development of DUI is
+ not supported by usual tools. Most of the time, developers have to manage the development in their own way. A lot of time is spent on the development of DUIs mostly the distributed aspects.
+􏰀 \item Support for distribution of user interfaces at running time:
+existing DUIs are limited to predefined applications and domains of application which lead to little support for the various possibilities of distribution.
+\item Support for multi-user collaboration: multi-user applications are developed in different ways depending on the use and domain of application. The lack
 of a common base is slowing down the development.
-􏰀 Concern #4. Execution control in the distributed envi- ronment: the control of the distribution is a real prob- lem when managing DUI systems [4]. The limitations are high especially with a fixed level of granularity. Some systems can replicate windows while not being able to replicate widgets. Others can manipulate wid- gets one at a time but no group of widgets.
-􏰀 Concern #5. Network transparency: The distribution of the UIs has to be network transparent in the sense that the user should not have to worry about network details such as IP address, user network and network settings.
-􏰀 Concern #6. Lack of description of the distributed do- main and models: The researches around multi-user ap- plications and distributed user interfaces are very spe- cifics to the needs of the developers and are almost never documented or badly documented.
-Model-based Approach. .\\
+\item 􏰀Execution control in the distributed environment: the control of the distribution is a real problem when managing DUI systems. The limitations are high especially with a fixed level of granularity. Some systems can replicate windows while not being able to replicate widgets. Others can manipulate wid- gets one at a time but no group of widgets.
+\item 􏰀Network transparency: The distribution of the UIs has to be network transparent in the sense that the user should not have to worry about network details such as IP address, user network and network settings.
+\item Lack of description of the distributed do- main and models: The researches around multi-user applications and distributed user interfaces are very specifics to the needs of the developers and are almost never documented or badly documented.
+Model-based Approach. 
+\end{itemize}
 
-
-\cite{melchior2011distribution}The problem is that the granularity of UI
-distributed elements is often coarse-grained; it is not possible to distribute
-at the widget level.\\
-
-???Benefits of DUI \cite{chen2011distributed}\\
-Distribution Enables Redirectable Interfaces
-In a DUI construction, interfaces can be redirected and shipped around electronically so that the user can interact using a proxy device. In our system, this has been useful for minimizing physical interactions when these interac- tions are undesirable and to allow users to effect changes without incurring the costs of device switching.
-Distribution Helps Interfaces Scale In Both Directions
-The devices available in a given environment are deter- mined by a combination
-of factors that include the avail- able infrastructure, concerns about
-portability and users' personal preferences. By allowing UIs to be broken down into distributable pieces, the UI can better accommodate both device-rich and device-starved situations. Since a DUI-based system allows users to easily multiplex UI ele- ments across devices in space or time, the system can take advantage of additional devices, while offering fallbacks (like cycling through UIs) for device-starved environments.\\
-
-
-\section{Recommender Systems}
-Tasks
-
-\section{DUI in Recommender Systems}
-nothing except: cite the group recommendation system \cite{worndlvoting}
+\section{Application of DUIs in Recommender Systems}
+Since the focus of our study is the application of DUIs for recommender
+systems, after investigating the latest trends in distributed user interfaces,
+its tools, best practices, and applications, we turned in our search to the application of DUIs in the field of recommendation applications. To our best knowledge,
+surveyed studies for the applications of distributed user interfaces do not
+include any for single-user recommendation systems. The application of DUIs in
+group recommender systems was investigated in a 2014 study by Woerndl et
+al.\cite{worndlvoting}. This study investigates a scenario of a movie
+recommender, where UI is distributed on two platforms a PDA that works as a SD
+and a table-top that works as an LD. Users get to view and rate recommended
+items on their PDA individually, and as a group, they get to reach a
+consensus by doing the voting on the table-top. This DUI solution to the
+voting part of group recommendation is proved by the study to improve the
+process of reaching consensus among a group. For that, Woerndl et al.'s study
+takes the first step towards investigating the benefits of using DUIs in recommender
+system by proving that there is a benefit to using DUIs in group recommendation.
+We believe our study takes a further step by bridging a gap in this research
+area, by indicating the benefits of using DUIs in
+single-user recommender systems.
