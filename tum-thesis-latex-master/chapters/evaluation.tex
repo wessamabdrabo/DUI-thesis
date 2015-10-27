@@ -43,9 +43,9 @@ filter, and pan on video photo to play on screen were also demoed clearly so
 participants would know how to perform the tasks. We explained that the goal of
 the study is not to test the functionalities but to get their impression about
 the apps. After all fucntionalities were demoed, participants were handed in a
-sheet that has the tasks they are expected to complete written down in the form of steps (see appendix). Also, they were
-handed in the user-experience questionnaire sheets. Participants were asked to
-take their time and ask any questions if needed and to fill-in the questionnaire
+sheet that has the tasks they are expected to complete written down in the form
+of steps (see appendix \ref{chapter:appendB}). Also, they were handed in the
+user-experience questionnaire sheets. Participants were asked to take their time and ask any questions if needed and to fill-in the questionnaire
 directly after they are done.
 \begin{figure}[t]
 \includegraphics[width=0.75\textwidth, center, center]{figures/IMG_6806}
@@ -54,13 +54,14 @@ directly after they are done.
 \end{figure}
 \subsection{Phase 2: Prototypes' Functionalities Test}
 The user test was done after the participant was made familiar with the apps and
-with the tasks of the study. Figure \ref{fig:figure51} shows part of one of the
-participant's interaction with DiRec during phase 2 of the user study. Each
-participant was given an iPhone mobile device with MiRec and DiRec installed, and was asked to sit across of an LD screen, which works as a display to DiRec's LD component.
+with the tasks of the study. Figures \ref{fig:figure51}, \ref{fig:figure52a},
+\ref{fig:figure52b}, \ref{fig:figure52c} shows part of one of the participant's
+interaction with DiRec during phase 2 of the user study. Each participant was given an iPhone mobile device with MiRec and DiRec installed, and was asked to sit across of an LD screen, which works as a display to DiRec's LD component.
 Participants were asked to start with the app version of their choice to avoid
 bias. After they are done with a given version, they start the tasks of the
 second version. The tasks were put in place so as to have a standard set of
-steps that all participants do. These steps (appendix) mainly consist of:
+steps that all participants do. These steps (appendix \ref{chapter:appendB})
+mainly consist of:
 navigating the list of recommendations through the Home screen, viewing video details, playing
 a video, rating a video, selecting a category of choice from the side menu, and
 for DiRec, filtering was added to this list. By the end of each set of steps in
@@ -72,6 +73,8 @@ are already done and have a feel of the apps already formed. Participants were
 observed during this test session, as part of the evaluation is to see how users react to the distribution aspect of the app.
 Our observations of participants' interactions constitute part of our evaluation
 of the results as shown later in the result section.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
@@ -93,6 +96,7 @@ of the results as shown later in the result section.
     \end{subfigure}
    \caption{Interacting with DiRec.}\label{fig:figure52}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 \subsection{Phase 3: Post-Experiment Survey}
 For eliciting participants' feedback, we use the User Experience Questionnaire
@@ -103,7 +107,7 @@ apps on a scale from 1 to 7. For the study, each participant was given 2
 sheets of the UEQ test and was asked to give their ratings for each app
 separately, directly after she/he is done with using the apps. She/He were also
 asked to not take more than 3 to 5 minutes in each evaluation, and not to analyse her
-answers, as the goal is to get her overall direct impression. Appendix
+answers, as the goal is to get her overall direct impression. Appendix \ref{chapter:appendA}
 show all of the 26 aspects that users were to rate. Participants were also asked
 to write down their overall feedback and comment in textual form in case they
 have any. Some participants preferred to give their feedback directly to us
@@ -113,41 +117,337 @@ specifically about the apps which was valuable to our analysis. Details of our
 post-experiment interviews are given in the results section.
 
 \section{Participants Demographics}
-23 participants joined our study, non of which are involved directly or
+24 participants joined our study, non of which are involved directly or
 indirectly in this research.
-Of the 23 participants, 18 are males and 5 are females. The age range of
+Of the 24 participants, 19 are males and 5 are females. The age range of
 participants is between 23 to 31. The majority of the participants are masters
 of informatics students at TU Munich, some are researchers or developers in the
 same field. We assumed that all participants have no prior knowledge in
 recommender systems and explained the procedure similarly to everyone regardless
 of their level of expertise.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/UEQ-scales}
+\caption{User Experience Questionnaire Scale Structure. Source
+\cite{UEQHandbook}.}
+\label{fig:figure512}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Study Results}
+\subsection{The User Experience Questionnaire}
+The evaluation of participants' experiences of MiRec and DiRec is done based
+on their ratings of the post User Experience Questionnaire (UEQ). The UEQ, as
+explained in the UEQ handbook \cite{UEQHandbook}, consists of 6 scales with 26
+items, which could be explained as follows:
+\begin{itemize}
+  \item \textbf{Attractiveness}: measures the overall impression or the
+  likability of the product.
+  \item \textbf{Perspicuity}: measures learnability and ease-of-use
+  (familiarity) with the product
+  \item \textbf{Efficiency}: measures the ability to perform tasks without
+  exerting extra effort.
+  \item \textbf{Dependability}: measures the user's control over the
+  product/experience.
+  \item \textbf{Stimulation}: measures how exciting and motivating the
+  experience is for the user.
+  \item \textbf{Novelty}: measures the level of innovation and creativity of the
+  product, and the ability of the product to catch the user's interest.
+\end{itemize}
+These 6 scales are further categorized into 3 groups of qualities:
+\textbf{\textit{Attractiveness}}, \textbf{\textit{Pragmatic
+Qualities}} (Perspicuity, Efficiency, Dependability), and
+\textbf{\textit{Hedonic Qualities}}(Stimulation and Novelty). Figure
+\ref{fig:figure512} shows the exact items that participants rated and which
+category/scale they fall under.\\
 
-%\begin{figure*}[t]
-%\centering
-%\includegraphics[width=1.0\textwidth]{figures/comparison.pdf}
-%\caption{Comparison of Scale Means in MiRec and DiRec.}
-%\end{figure*}
+UEQ uses the Alpha Coefficient to measure the consistency of a scale i.e.
+all items in a given scale  measure the aspect or quality that is meant to be
+measured by this scale.
+We need to consider this value in our evaluation since sometimes it is the case
+that users could misinterpret a given item, or a given item could be irrelevant
+to a study. Therefore, a misinterpreted item in a scale could be detected by
+looking at the individual mean value per item. For example, of all items in the
+scale have positive values except for a single item that has a negative value,
+then it is likely that this item is misinterpreted by participants and should be
+evaluated cautiously.\\
+
+The application of the UEQ for measuring the different aspects of users
+experience of a given application could be done in 2 ways. If the test involves
+comparison of features or experiences of 2 versions fo the same application
+(for example a new version of a given product to an older version), one could
+use the \textbf{UEQ Compare of Scales Means} method, in which all of the UEQ
+scales are compared for the 2 versions to show if one version is significantly different
+from the other with respect to each aspect (attractiveness, perspicuity,
+efficiency, etc\ldots). In a graphical representation of such comparison,
+error bars are shown which indicate a 95\% confidence interval. Confidence
+intervals is a measure for the accuracy of the measurements. As explained in
+\cite{UEQHandbook}, since scale means would never be the same if the same
+experiment was repeated a given number of times, the confidence interval of 95\%
+shows where 95\% of the scales means are located. Therefore, if the error bars
+(confidence intervals), of the compared products do not overlap at all, this
+indicates a significant difference in the 5\% level of the measured scale.
+\\
+The other test could be done on individual products given directly the results
+of the means of the different scales. This test could show if a given
+application has sufficient user experience i.e. if it meets general
+expectations concerning users experience.Scales are measured between -3
+(extremely bad) and +3 (extremely good). The test also provides a benchmark of
+163 products to classify evaluated applications against. Results put the
+evaluated applications as excellent, good, above average, bellow average,
+or bad. The UEQ could also be used to make educated guesses about the possible
+areas of improvement for a given evaluated application.\\
+
+For the evaluation of our study, we apply both the comparison model between
+MiRec and DiRec, as well as individual evaluations for MiRec and DiRec, with a
+given comparison with benchmark studies.\\
+
+\subsection{MiRec Results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth]{figures/mirec-results}
+\caption{MiRec Scale Means.}
+\label{fig:figure54b}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth]{figures/mirec-results2}
+\caption{MiRec Grouped Scale Means.}
+\label{fig:figure54a}
+\end{subfigure}
+\caption{MiRec Scale Means.}
+\label{fig:figure54}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/mirec-results3}
+\caption{MiRec Mean Value Per Item.}
+\label{fig:figure56}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Confidence Intervals}
+Explain section \ldots.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[t]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{7}{|c|}{\textbf{Confidence intervals (p=0.05) per scale}}                            \\ \hline
+Scale           & Mean   & Std. Dev. & N  & Confidence & \multicolumn{2}{l|}{Confidence interval} \\ \hline
+Attractiveness  & 1.850  & 0.791     & 23 & 0.323      & 1.527               & 2.173              \\ \hline
+Perspicuity     & 1.950  & 1.026     & 23 & 0.419      & 1.531               & 2.369              \\ \hline
+Efficiency      & 1.675  & 0.624     & 23 & 0.255      & 1.420               & 1.930              \\ \hline
+Dependability   & 1.575  & 0.736     & 23 & 0.301      & 1.274               & 1.876              \\ \hline
+Stimulation     & 1.225  & 0.854     & 23 & 0.349      & 0.876               & 1.574              \\ \hline
+Novelty         & 0.825  & 0.635     & 23 & 0.260      & 0.565               & 1.085              \\ \hline
+\end{tabular}
+\caption{Confidence Interval MiRec.}
+\label{table:table55}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Scale Consistency}
+Explain section \ldots.
+
+\subsubsection{Comparison To Benchmark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/mirec-benchmark}
+\caption{MiRec Comparison to Benchmark Studies.}
+\label{fig:figure57}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%\begin{table}[]
-%\centering
-%\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
-%\hline
-%\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Scale}}} &
-% \multicolumn{5}{c|}{\textbf{MiRec Dataset}}                                                &                        &  & \multicolumn{6}{c|}{\textbf{DiRec Dataset}}                                                                         \\ \cline{2-14} \multicolumn{1}{|c|}{}                                & \textbf{Mean} & \textbf{STD} & \textbf{N} & \textbf{Confidence} & \multicolumn{2}{l|}{\textbf{Confidence Interval}} &  & \textbf{Mean} & \textbf{STD} & \textbf{N} & \textbf{Confidence} & \multicolumn{2}{l|}{\textbf{Confidence Interval}} \\ \hline
-%\textbf{Attractiveness}                               & 1.48          & 0.89   
-% & 21         & 0.38                & 1.09                     & 1.86                   &  & 1.94          & 0.88         & 19         & 0.39                & 1.55                    & 2.33                    \\ \hline \textbf{Perspicuity}                                  & 2.11          & 0.93         & 21         & 0.40                & 1.71                     & 2.51                   &  & 1.00          & 1.34         & 19         & 0.60                & 0.40                    & 1.60                    \\ \hline
-%\textbf{Efficiency}                                   & 1.74          & 0.78   
-% & 21         & 0.34                & 1.40                     & 2.07                   &  & 1.58          & 1.07         & 19         & 0.48                & 1.10                    & 2.06                    \\ \hline \textbf{Dependability}                                & 1.11          & 0.76         & 21         & 0.32                & 0.78                     & 1.43                   &  & 0.97          & 1.03         & 19         & 0.46                & 0.51                    & 1.44                    \\ \hline
-%\textbf{Stimulation}                                  & 0.83          & 0.83   
-% & 21         & 0.36                & 0.48                     & 1.19                   &  & 1.67          & 1.10         & 19         & 0.49                & 1.18                    & 2.16                    \\ \hline \textbf{Novelty}                                      & -0.27         & 1.18         & 21         & 0.50                & -0.78                    & 0.23                   &  & 1.80          & 0.74         & 19         & 0.33                & 1.47                    & 2.14                    \\ \hline
-%\end{tabular}
-%\caption{Comparison of Scale Means Shows the scale means and the corresponding
-% 5 percent confidence intervals.}
-%\label{resTable1}
-%\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[t]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Scale}          & \textbf{Mean} & \textbf{Comparison to benchmark} & \textbf{Interpretation}                       \\ \hline
+\textbf{Attractiveness} & 1.850         & Excellent                         & In the range of the 10\% best results         \\ \hline
+\textbf{Perspicuity}    & 1.950         & Excellent                         & In the range of the 10\% best results         \\ \hline
+\textbf{Efficiency}     & 1.675         & Excellent                         & In the range of the 10\% best results         \\ \hline
+\textbf{Dependability}  & 1.575         & Good                              & 10\% of results better, 75\% of results worse \\ \hline
+\textbf{Stimulation}    & 1.225         & Above Average                     & 25\% of results better, 50\% of results worse \\ \hline
+\textbf{Novelty}        & 0.825         & Above Average                     & 25\% of results better, 50\% of results worse \\ \hline
+\end{tabular}
+\caption{MiRec Comparison to Benchmark}
+\label{table:table54}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-UEQ handook \cite{UEQHandbook}
+\subsubsection{Data Inconsistencies}
+Explain section \ldots .
+
+\subsection{DiRec Results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth]{figures/direc-results}
+\caption{DiRec Scale Means.}
+\label{fig:figure54b}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\textwidth}
+\includegraphics[width=\textwidth]{figures/direc-results2}
+\caption{DiRec Grouped Scale Means.}
+\label{fig:figure54a}
+\end{subfigure}
+\caption{DiRec Scale Means.}
+\label{fig:figure54}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/direc-results3}
+\caption{DiRec Mean Value Per Item.}
+\label{fig:figure510}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Confidence Intervals}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[t]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{7}{|c|}{\textbf{Confidence intervals (p=0.05) per scale}}                                                                              \\ \hline
+\textbf{Scale}          & \textbf{Mean} & \textbf{Std. Dev.} & \textbf{N} & \textbf{Confidence} & \multicolumn{2}{l|}{\textbf{Confidence interval}} \\ \hline
+\textbf{Attractiveness} & 1.850         & 0.791              & 23         & 0.323               & 1.527                   & 2.173                   \\ \hline
+\textbf{Perspicuity}    & 1.950         & 1.026              & 23         & 0.419               & 1.531                   & 2.369                   \\ \hline
+\textbf{Efficiency}     & 1.675         & 0.624              & 23         & 0.255               & 1.420                   & 1.930                   \\ \hline
+\textbf{Dependability}  & 1.575         & 0.736              & 23         & 0.301               & 1.274                   & 1.876                   \\ \hline
+\textbf{Stimulation}    & 1.225         & 0.854              & 23         & 0.349               & 0.876                   & 1.574                   \\ \hline
+\textbf{Novelty}        & 0.825         & 0.635              & 23         & 0.260               & 0.565                   & 1.085                   \\ \hline
+\end{tabular}
+\caption{DiRec Confidence Intervals.}
+\label{table:table57}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Scale Consistency}
+
+\subsubsection{Comparison To Benchmark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/direc-benchmark}
+\caption{Comparison of DiRec to Benchmark Studies.}
+\label{fig:figure511}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[t]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Scale}          & \textbf{Mean} & \textbf{Comparison to benchmark} & \textbf{Interpretation}                       \\ \hline
+\textbf{Attractiveness} & 1.850         & Excellent                         & In the range of the 10\% best results         \\ \hline
+\textbf{Perspicuity}    & 1.950         & Excellent                         & In the range of the 10\% best results         \\ \hline
+\textbf{Efficiency}     & 1.675         & Excellent                         & In the range of the 10\% best results         \\ \hline
+\textbf{Dependability}  & 1.575         & Good                              & 10\% of results better, 75\% of results worse \\ \hline
+\textbf{Stimulation}    & 1.225         & Above Average                     & 25\% of results better, 50\% of results worse \\ \hline
+\textbf{Novelty}        & 0.825         & Above Average                     & 25\% of results better, 50\% of results worse \\ \hline
+\end{tabular}
+\caption{DiRec Comparison to Benchmark Studies.}
+\label{table:table56}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Data Inconsistencies}
+Explain section\ldots
+
+\subsection{UEQ Compare Scales Means}
+
+\subsubsection{Comparison of Scale Means}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/compare}
+\caption{Comparison of Scale Means in MiRec and DiRec.}
+\label{fig:figure53}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[t]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Scale}}} & \multicolumn{6}{c|}{\textbf{MiRec Dataset}}                                                                         \\ \cline{2-7} 
+\multicolumn{1}{|c|}{}                                & \textbf{Mean} & \textbf{STD} & \textbf{N} & \textbf{Confidence} & \multicolumn{2}{l|}{\textbf{Confidence Interval}} \\ \hline
+\textbf{Attractiveness}                               & 1.34          & 0.91         & 25         & 0.36                & 0.98                     & 1.70                   \\ \hline
+\textbf{Perspicuity}                                  & 2.08          & 0.88         & 25         & 0.35                & 1.73                     & 2.43                   \\ \hline
+\textbf{Efficiency}                                   & 1.51          & 0.91         & 25         & 0.36                & 1.15                     & 1.87                   \\ \hline
+\textbf{Dependability}                                & 1.20          & 0.76         & 25         & 0.30                & 0.90                     & 1.50                   \\ \hline
+\textbf{Stimulation}                                  & 0.78          & 0.86         & 25         & 0.34                & 0.44                     & 1.12                   \\ \hline
+\textbf{Novelty}                                      & -0.29         & 1.17         & 25         & 0.46                & -0.75                    & 0.17                   \\ \hline
+\end{tabular}
+\caption{MiRec.}
+\label{table:table51}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[t]
+\centering  
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Scale}}} & \multicolumn{6}{c|}{\textbf{DiRec Dataset}}                                                                         \\ \cline{2-7} 
+\multicolumn{1}{|c|}{}                                & \textbf{Mean} & \textbf{STD} & \textbf{N} & \textbf{Confidence} & \multicolumn{2}{l|}{\textbf{Confidence Interval}} \\ \hline
+\textbf{Attractiveness}                               & 1.67          & 1.26         & 23         & 0.52                & 1.15                    & 2.18                    \\ \hline
+\textbf{Perspicuity}                                  & 0.98          & 1.59         & 23         & 0.65                & 0.33                    & 1.63                    \\ \hline
+\textbf{Efficiency}                                   & 1.32          & 1.26         & 23         & 0.51                & 0.80                    & 1.83                    \\ \hline
+\textbf{Dependability}                                & 0.86          & 1.20         & 23         & 0.49                & 0.37                    & 1.35                    \\ \hline
+\textbf{Simulation}                                   & 1.66          & 1.03         & 23         & 0.42                & 1.24                    & 2.08                    \\ \hline
+\textbf{Novelty}                                      & 1.68          & 0.92         & 23         & 0.38                & 1.31                    & 2.06                    \\ \hline
+\end{tabular}
+\caption{DiRec.}
+\label{table:table52}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{T-Test} 
+The T-Test is used to check if the scale means of two measured products differ
+significantly. As default the Alpha-Level 0.05 is used.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|r|}{Alpha Level:} & 0.05   &                                                         \\ \hline
+                                   &        &                                                         \\ \hline
+\textbf{Attractiveness}            & 0.3131 & No Significant Difference       \\ \hline
+\textbf{Perspicuity}               & 0.0059 & \textbf{Significant Difference} \\ \hline
+\textbf{Efficiency}                & 0.5452 & No Significant Difference       \\ \hline
+\textbf{Dependability}             & 0.2509 & No Significant Difference       \\ \hline
+\textbf{Stimulation}               & 0.0025 & \textbf{Significant Difference} \\ \hline
+\textbf{Novelty}                   & 0.0000 & \textbf{Significant Difference} \\ \hline
+\end{tabular}
+\caption{T-Test with Alpha Level 0.05.}
+\label{table:table53}
+\end{table} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Discussion}
