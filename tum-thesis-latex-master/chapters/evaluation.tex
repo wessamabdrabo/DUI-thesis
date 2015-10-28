@@ -162,7 +162,6 @@ Qualities}} (Perspicuity, Efficiency, Dependability), and
 \textbf{\textit{Hedonic Qualities}}(Stimulation and Novelty). Figure
 \ref{fig:figure512} shows the exact items that participants rated and which
 category/scale they fall under.\\
-
 UEQ uses the Alpha Coefficient to measure the consistency of a scale i.e.
 all items in a given scale  measure the aspect or quality that is meant to be
 measured by this scale.
@@ -173,7 +172,6 @@ looking at the individual mean value per item. For example, of all items in the
 scale have positive values except for a single item that has a negative value,
 then it is likely that this item is misinterpreted by participants and should be
 evaluated cautiously.\\
-
 The application of the UEQ for measuring the different aspects of users
 experience of a given application could be done in 2 ways. If the test involves
 comparison of features or experiences of 2 versions fo the same application
@@ -188,8 +186,7 @@ intervals is a measure for the accuracy of the measurements. As explained in
 experiment was repeated a given number of times, the confidence interval of 95\%
 shows where 95\% of the scales means are located. Therefore, if the error bars
 (confidence intervals), of the compared products do not overlap at all, this
-indicates a significant difference in the 5\% level of the measured scale.
-\\
+indicates a significant difference in the 5\% level of the measured scale.\\
 The other test could be done on individual products given directly the results
 of the means of the different scales. This test could show if a given
 application has sufficient user experience i.e. if it meets general
@@ -199,45 +196,48 @@ expectations concerning users experience.Scales are measured between -3
 evaluated applications as excellent, good, above average, bellow average,
 or bad. The UEQ could also be used to make educated guesses about the possible
 areas of improvement for a given evaluated application.\\
-
 For the evaluation of our study, we apply both the comparison model between
 MiRec and DiRec, as well as individual evaluations for MiRec and DiRec, with a
 given comparison with benchmark studies.\\
 
 \subsection{MiRec Results}
+In this section we present the results of participants' ratings to MiRec. We
+will look at all of the UEQ scales, the consistency of the scales and the rating
+given, as well as where MiRec stands in comparison to UEQ's benchmark studies.
 
+\subsubsection{UEQ Scale Means}
+UEQ's scales' means for MiRec is given in figure\ref{fig:figure54}. Figure
+\ref{fig:figure54a} show the detailed scales, while figure \ref{fig:figure54b}
+show the grouped scales. All of the scales show a positive evaluation (above
++0.8). As noticed, attractiveness and pragmatic qualities scores much higher
+than hedonic qualities (novelty and stimulation). Nevertheless, all of the scales range in
+the yellow and green sections which indicate a positive evaluation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[htbp]
 \centering
-\begin{subfigure}[b]{0.5\textwidth}
+\begin{subfigure}[b]{0.3\textwidth}
 \includegraphics[width=\textwidth]{figures/mirec-results}
 \caption{MiRec Scale Means.}
 \label{fig:figure54b}
 \end{subfigure}
-\begin{subfigure}[b]{0.5\textwidth}
+\begin{subfigure}[b]{0.3\textwidth}
 \includegraphics[width=\textwidth]{figures/mirec-results2}
-\caption{MiRec Grouped Scale Means.}
+\caption{MiRec Grouped Scales.}
 \label{fig:figure54a}
 \end{subfigure}
 \caption{MiRec Scale Means.}
 \label{fig:figure54}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\subsubsection{Quality of Results: Data and Scales Consistency}
+Table \ref{table:table55} shows the 5\% confidence intervals of
+the scales means. All of the scales means have a relatively small confidence
+interval which shows that most of the participants' opinions with respect to
+the different scales were consistent, which gives us a strong reason to trust
+the results.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/mirec-results3}
-\caption{MiRec Mean Value Per Item.}
-\label{fig:figure56}
-\end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Confidence Intervals}
-Explain section \ldots.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
+\begin{table}[!htbp]
+\tiny
 \centering
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
@@ -254,24 +254,46 @@ Novelty         & 0.825  & 0.635     & 23 & 0.260      & 0.565               & 1
 \label{table:table55}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Scale Consistency}
-Explain section \ldots.
-
-\subsubsection{Comparison To Benchmark}
-
+Figure \ref{fig:figure56} shows the means values per item, which is an indicator
+to the consistency of how users interpreted the different items in a given
+scale. As shown, different items in a given scale are shown in the same color.
+Since all items of all scales have positive means, this could indicate that
+there were not misinterpreted items in any scale by participants.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure*}[t]
+\begin{figure*}[!htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/mirec-results3}
+\caption{MiRec Mean Value Per Item.}
+\label{fig:figure56}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+UEQ provides a way to detect inconsistent data in a given scale. Since not all
+of the participant would give correct or serious ratings, we needed a way to
+know if there are any discrepancies in the data. Our results show 2 out of
+the 24 participants who gave inconsistent ratings to 3 of the scales. 1
+participant gave 2 inconsistent scales ratings, 9 participants gave 1
+inconsistent scale ratings. This on average means that the data was sufficiently
+consistent.
+
+\subsubsection{Comparison of MiRec to UEQ Benchmark}
+Figure \ref{fig:figure57} and table \ref{table:table54} show the results of
+comparing MiRec's scales means to UEQ's benchmark. As it is shown, MiRec's
+attractiveness measure in the the range of 10\% of best results (excellent).
+With respect to dependability, MiRec is better than 75\% of the results, and
+worse than 10\% of the results (good). When it comes to stimulation and novelty,
+MiRec is better than 50\% of the results, while worse than 25\% of the results
+(above average). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[!htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/mirec-benchmark}
 \caption{MiRec Comparison to Benchmark Studies.}
 \label{fig:figure57}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
+\begin{table}[!htbp]
+\tiny
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -288,10 +310,6 @@ Explain section \ldots.
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\subsubsection{Data Inconsistencies}
-Explain section \ldots .
-
 \subsection{DiRec Results}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -300,15 +318,15 @@ Explain section \ldots .
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth]{figures/direc-results}
 \caption{DiRec Scale Means.}
-\label{fig:figure54b}
+\label{fig:figure16b}
 \end{subfigure}
 \begin{subfigure}[b]{0.5\textwidth}
 \includegraphics[width=\textwidth]{figures/direc-results2}
 \caption{DiRec Grouped Scale Means.}
-\label{fig:figure54a}
+\label{fig:figure516a}
 \end{subfigure}
 \caption{DiRec Scale Means.}
-\label{fig:figure54}
+\label{fig:figure516}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
