@@ -1,7 +1,95 @@
 \chapter{Conclusion And Future Work}\label{chapter:conc}
-Participants suggestions and comments, together with the evaluation we got using
-UEQ, offer an indicator to where we should look for improvements in our
-suggested solution, as well as to where the strong points of our DUI
-solution are.
+In this study, our main goal was the investigation of the effect of using
+distributed user interfaces on the experience of users of recommendation
+applications. More specifically, we wanted to put to test our motivation for
+using DUIs in recommender systems, and to device a method that would enhance the
+users' experience of recommendation applications through distributing their UI.
+Our motivation stems from the promising potential that applications of DUIs show in the domain of interactive and
+ubiquitous systems, and the lack of research that tackles DUI applications in
+the recommender systems domain. In the course of this investigation, we chose
+the scope of single-user recommender systems.  We developed the scenario of a
+dual-display (SD/LD) video recommender mobile application, in which users could
+migrate parts of the UI of the mobile application to a larger display, and would
+be able to play videos, view videos' details, and filter videos on the larger
+display by performing simple gestures, such as swiping or panning on the UI of
+the mobile application. Additionally, users could also perform activities in
+parallel, such as rating videos on the SD while watching on the LD, which is
+only made possible through a distributed UI scenario. In the course of our
+investigation, we presented the design of a generic model for distributed user interfaces for recommendation applications. A subset of our design was chosen for the implementation of DiRec:
+a prototype of a distributed video recommendation mobile application.
+We also developed MiRec, a non distributed version of DiRec, in which all
+functionalities are solely available through the mobile device, which was
+intended for comparison with DiRec in a user study.
+Our conducted user study entailed asking participants to use both versions, DiRec and MiRec, and to evaluate their experiences using a post-experiment User Experiment Questionnaire (UEQ). Participants' suggestions
+and comments, together with the evaluation achieved using the UEQ, offer an
+indicator to where we should look for improvements in our suggested solution, as
+well as to where the strong points of our DUI solution are. The UEQ results show
+a significant difference in attractiveness, stimulation, and novelty measures of
+DiRec over MiRec, as well as high measures of efficiency and dependability of
+DiRec, which despite not being significantly different from MiRec's results, is
+still an indicator that efficiency and user's span of control over the
+experience was not affected by distribution. Lastly, the relatively lower perspicuity
+measures (however still in the higher range compared to UEQ benchmark) of DiRec
+than MiRec indicate that understandability and learnability aspects of DiRec are
+subject to improvement.
+\section{Research Questions Revisited} 
+The process of manifesting our design through implementing and testing our
+prototype applications, augmented with the achieved study results, aid us in
+answering our research questions:
+\begin{itemize}
+  \item Video recommendation in a multi-device environment has proved through 
+  our study to be a scenario in which a user of single-user recommendation
+  application would prefer, and arguably need, a secondary larger display device
+  to view videos. This result is supported by the high attractiveness measures
+  of DiRec as well as user's positive feedback of DiRec's experience.
+  \item The post recommendation phase (presenting the recommended items,
+  consuming the items, and rating of items), is shown to be best suited for UI
+  distribution through our study. Pre-recommendation phase might need further
+  investigation as our study did not cover this aspect.
+  \item In our design, we focused on the UI components that constitute a
+  recommendation task as the unit of UI distribution. For example, in our
+  design, we use gestures on items such as a table cell, or the video detail
+  picture, to perform action such as migrating item consumption or item
+  presentation from the SD to the LD.
+  \item In attempting to distribute the UI with respect to time and user, we
+  suggest in our design that allowing users to choose a UI distribution
+  configuration, being able to save, load, or reset this configuration, allow
+  users to be in control of the distribution scheme, and it as well allows the
+  system to be dynamically distributed (distribution in Time). In our study, we
+  do not apply the configuration strategy, consequently, the span of control of
+  the user is limited by the pre-configured distribution scheme selected by the
+  system. The high dependability measures of DiRec show that participants felt
+  in control of the experience. However, since this measure was not
+  significantly higher than MiRec's, this could be suggesting investigating more
+  with aspect through perhaps giving user the ability to configure distribution
+  schemes.
+  \item We used dual display (SD/LD display) as our main distribution strategy
+  in DiRec. The strategy has proved suitable for constructed video
+  recommendation scenario. Other schemes for UI distribution in recommender
+  systems could also be further investigated.
+  \item Lastly, DUIs' integration in single-user recommender systems is
+  evidently shown by our study 's results to increase the likeability,
+  stimulation, and novelty of users of such systems. Hence, we could presumably
+  deduce the overall enhancement of the user's experience through UI
+  distribution.
+\end{itemize}
 
-continue\ldots
+\section{Future Work}
+Perhaps the question still remains of what is next to be tackled, or what areas
+could be improved with UI distribution in recommender systems. Our study has
+fallen short in providing an explanation of whether the relatively lower
+perspicuity measures of DiRec is a result of insufficient explanation of the
+procedure of the study, that perhaps participants did not have the time to
+familiarize with DiRec before carrying out the experiment, or if it was the
+design of DiRec that was relatively less easy to understand and learn. A
+possible future work would be to further investigate this aspect. Possibly, more
+scenarios in other domains of recommender systems (than video recommendation)
+could be investigated in which there could be a potential need for a distributed UI for a single user.
+Moreover, other distribution strategies than SD/LD, perhaps one that involve
+more than 2 devices, could be further investigated. Lastly, we strongly believe
+that giving more span of control to the user through allowing pre-configuration
+of UI distribution schemes, and through making the UI distribution process more
+dynamic, could further enhance the DUI experience.
+
+ 
+
