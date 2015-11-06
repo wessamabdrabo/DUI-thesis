@@ -32,8 +32,8 @@ Presented in this section is a set of generic scenarios for UI Distribution of i
 \subsubsection{Migrating Item Consumption}                    
 In almost all types of recommender systems applications, there is an item to consume. Therefore, one of the main distribution scenarios to consider is the distribution of the task of recommended items' consumption. Unlike the regular scenario, where the user of a recommender system is presented with the recommended items and is able to select and consume an item on the same device, a distributed alternative would be to present the recommended content on one device while giving the user the ability to consume the content on the other device. As shown in figure \ref{fig:figure31}, this scenarios could be triggered by the user performing a gesture on one of the items presented on the presentation node (i.e. the node that would contain the presentation of the recommended content). The item consumption task is now migrated to be carried out on the other device/platform. 
 \begin{figure}[h]
-\includegraphics[width=0.9\textwidth, inner, center]{figures/generic1}
-\caption{Migrating Item Consumption from Presentation Node to Consumption Node.}
+\includegraphics[width=0.9\textwidth, center, center]{figures/generic1}
+\caption{Migrating item consumption from presentation node to consumption node.}
 \label{fig:figure31}
 \end{figure}
 Here comes the question of time of distribution of the item consumption along the two platforms, as well as the question of who (user or system) makes the decision of which UI components of this scenario are to be displayed on which platform. These questions add variations to the scenario on hand.\\
@@ -41,8 +41,8 @@ The system could load the UI components with a pre-configuration allowing the us
       
 \subsubsection{Performing Parallel Activities}
 \begin{figure}[h]
-\includegraphics[width=0.9\textwidth, inner, center]{figures/generic2}
-\caption{Caption}
+\includegraphics[width=0.9\textwidth, center, center]{figures/generic2}
+\caption{Performing parallel activities on different distribution nodes.}
 \label{fig:figure32}
 \end{figure}
 In a distributed environment, presenting the user with different platforms through which the user could perform tasks simultaneously could be leveraged to perform parallel activities. In this case the distribution is achieved through distributing different interface components to be executed asynchronously. In contrast to the non-distributed scenario in which the user usually can not perform UI related tasks in parallel (asynchronously), but would usually wait for a UI task to be done before he/she could start the next (synchronously). Figure \ref{fig:figure32} is showing how a task could start running on a given node in the distributed environment, denoted here by task j on node Y, which triggers task i to start on node X. In this case, tasks are run in parallel and the user can perform these activities independently from each other and simultaneously. After the tasks end on their given node, execution of proceeding tasks could be carried out also in a distributed manner. 
@@ -53,7 +53,7 @@ In a distributed environment with multiple displays, LD-SD modes are used to sho
 The presentation of the recommended content could be done at a different level of granularity. Fine granularity is offered on SD while coarse level of presentation is provided on the LD. This way, we provide the user with alternative ways to view the content. At a glance, he/she could get an overview of the provided content with a graphical indicator for the recommendation score on the LD. If more details are needed, the SD would provide more  detailed information. This concept of UI distribution is what comes to be known as overview-detail coupling [cite].\\
 Figure \ref{fig:figure33} suggests presenting a detailed presentation  of content on the SD on which the user could get all available detailed information of the provided content (for example in a form of a detailed list), while on the LD, the user could be presented with an overview of the same content (for example, in the form of picture icons with titles presented with in different sizes). Selecting an item on either mode later could lead to the execution of a proceeding task on either platform such as item consumption or viewing more information for the item.\\      
 \begin{figure}[h!]
-\includegraphics[width=0.9\textwidth, inner, center]{figures/generic3}
+\includegraphics[width=0.9\textwidth, center, center]{figures/generic3}
 \caption{Overview-Detail Presenations}
 \label{fig:figure33}
 \end{figure}
@@ -63,7 +63,7 @@ The previous design is to be inherited by the system, which makes the UI distrib
 As the user is presented with a wide array of recommended content, he/she might be willing to filter his/her choice of what to consume of this content. On a multi-device/platform environment, the filtering task could be distributed along the different nodes of the system. As shown in figure \ref{fig:figure34}, the user could initiate a gesture on items on node X to be transferred/redirected to node Y. By the end of this process, the user ends up with a presentation of all the selected/filtered items on node Y. The user could next select one of these items to view more details. This is an example of synchronous task distribution along different platforms.
   
 \begin{figure}[h!]
-\includegraphics[width=0.9\textwidth, inner, center]{figures/generic4}
+\includegraphics[width=0.9\textwidth, center, center]{figures/generic4}
 \caption{Recommended Content Filtering}
 \label{fig:figure34}
 \end{figure}
@@ -71,7 +71,7 @@ As the user is presented with a wide array of recommended content, he/she might 
 \subsubsection{Content Redirection}
 Content (output) redirection is a key feature in a multi-device environment [cite]. It is argued to be more important in case of multi-user systems, however, it could still be leveraged for single-user scenarios. Item consumption redirection is considered one special case of content redirection. Other examples would be redirecting recommended content details to be presented between SD and LD displays. Figure \ref{fig:figure35} shows how node X presents the recommended content, while on performing a gesture on any of the items, this content could be transferred/redirected to be presented on node Y. This usually means the distribution of UI components representing this content is what enables the redirection of content seamlessly between the two presentation nodes. The user could possibly then proceed with item consumption on the same node or on a different node.   
 \begin{figure}[h!]
-\includegraphics[width=0.9\textwidth, inner, center]{figures/generic5}
+\includegraphics[width=0.9\textwidth, center, center]{figures/generic5}
 \caption{Content Redirection}
 \label{fig:figure35}
 \end{figure}
@@ -91,7 +91,7 @@ Less research have been made to make a case for the use of UI distribution of fo
 
 \subsection{Platforms and Environment}
 \begin{figure}[h!]
-\includegraphics[width=0.6\textwidth, inner, center]{figures/env}
+\includegraphics[width=0.6\textwidth, center, center]{figures/env}
 \caption{Overall view of the system's environment}
 \label{fig:figure311}
 \end{figure}
@@ -107,7 +107,7 @@ This scenario presents the initiation point of the system, in which the user is 
 The pre-recommendation phase usually starts by the elicitation of a user profile. Creating a profile usually involves filling out information forms, and likely rating some prototype items or entering preferences. This step would differ from one system to the other. For the video recommender, this involves asking the user directly to enter basic information and to rate a list of topics and interests to give a background about the user's preferences. 
 The assumption in this step is that filling out textual forms as well as rating would better be performed on the handheld device than a larger display. The user is assumed to have more control over input for smaller devices. Therefore, this task starts at in the SD. After the user finishes the profile creation step on the SD, the recommended content is then displayed on both SD and LD displays.
 \begin{figure}[h!]
-\includegraphics[width=0.85\textwidth, inner,
+\includegraphics[width=0.85\textwidth, center,
 center]{figures/presentation-detail}
 \caption{Presentation of Recommendation Results in LD-SD Modes.}
 \label{fig:figure38}
@@ -134,7 +134,7 @@ overcomes this problem.\\
 \subsubsection{Recommended Item Consumption}
 Similar to the recommended item details scenario, item consumption redirection is also given as an option to the user by asking the user if redirecting item consumption to the LD is his/her preferred option or if it should the content should be played on the SD, and saving this configuration for later use. Consequently, if the user selects to consume the content on the LD, playing the recommended videos is done as depicted by figure \ref{fig:figure36}. On the video details page, the user performs a pan gesture on the video image,  which then triggers the migration of the video consumption from the mobile device to the LD. The video player automatically stars on the LD, providing the user with all controls for the video playback.  
 \begin{figure}[h!]
-\includegraphics[width=0.9\textwidth, inner, center]{figures/playrate}
+\includegraphics[width=0.9\textwidth, center, center]{figures/playrate}
 \caption{Recommended Items Consumption.}
 \label{fig:figure36}
 \end{figure}
@@ -148,7 +148,7 @@ The rating, similar to the user profile creation, include user input such as ind
 \subsubsection{Filtering Recommended Items}
 The filtering for the recommended items, although not a main task in recommendation, is believed to add to the value of the system in the proposed distributed UI environment. It is one of the tasks that leverages from the availability of the different platforms for the benefit of the user's experience. As shown in figure \ref{fig:figure39}, the filtering is done by performing a left swipe gesture on the video item in the list view on the mobile device.
 \begin{figure}[h!]
-\includegraphics[width=0.85\textwidth, inner, center]{figures/filtering}
+\includegraphics[width=0.85\textwidth, center, center]{figures/filtering}
 \caption{Filtering of Recommended Items.}
 \label{fig:figure39}
 \end{figure}
