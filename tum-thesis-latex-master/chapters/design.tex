@@ -4,11 +4,11 @@ In the previous chapters, the foundations of recommender systems were introduced
 
 The motivation of the proposed design could be best described through the following scenario: A user of a recommendation application receives recommendations on his/her mobile device. The user of such application might be willing to migrate the recommended content to be consumed on a different device in his/her environment, as his/her mobile device's battery might be expiring, or the consumption of the recommended item would be more convenient on the other device.
 
-The actualization of the previous scenario depicts a multi-device (and possibly multi-platform) environment, in which the flow of control (logic) and application's user interface are decoupled in a way that allows for the distribution of UI components along the different devices. In other words, the user of such system is provided with a distributed solution, which enables him/her to perform tasks on whichever device in this environment (by for example migrating the UI components between the different devices) independently of where the application is running, and of the constraints presented by the different platforms running the application.
-
+The actualization of the previous scenario depicts a multi-device (and possibly
+multi-platform) environment, in which the flow of control (logic) and
+the application's user interface are decoupled in a way that allows for the
+distribution of UI components along the different devices. In other words, the user of such system is provided with a distributed solution, which enables him/her to perform tasks on whichever device in this environment (by for example migrating the UI components between the different devices) independently of where the application is running, and of the constraints presented by the different platforms running the application.
 The following section starts by describing a generic model for UI distribution of recommendation applications, followed by a description of more specific scenarios relative to our distributed video recommender application.
-
-
 \section{Generic Model for Recommender Systems UI Distribution}
 As debriefed earlier, there are different dimensions to UI distribution. The proposed design is described through different UI distribution scenarios with respect to the following UI distribution dimensions: time, user, platform, and task. This section describes how the different distribution dimensions could alter the design decisions for a system whose UI is targeted for distribution. 
 \subsection{Regarding Distribution Dimensions on Designing Distributed UIs} 
@@ -19,28 +19,49 @@ The aspect of when the UI elements of an interactive system are to be distribute
 In most of the scenarios, identifying whether the user or the system initiates the distribution is essential to the design. Creating a scenario in which the user detects a need for UI distribution, computes and selects an alternative scenario, requires the system to be more adaptable than the case when the system initiates the distribution. When a user initiates the UI distribution, they could select components to be displayed on the systems' platforms. Later, they could also reside to the possibility of restoring the UI to its original state, or keep the new configuration saved for later use. Alternatively, the system designer could detect a need for distribution and configure the system to initiate the UI distribution on, for example, carrying out specific tasks, or if the system is loaded with a specific configuration.    
  
 \subsubsection{Platform: Where to Distribute?}
-It can be fairly assumed that a distributed scenario is probably going to involve different platform. In every distributed scenario, on which platform the UI components are decided (by system or user, dynamically or statically) to reside would alter how the UI needs to be adjusted to best fit the new platform. For example, allowing a UI to be transferred between a limited display of a PDA and a larger display such as a tabletop would require adjustment for how the different UI components are to be adjusted to fit the limitations of each platform.   
+It can be fairly assumed that a distributed scenario is probably going to
+involve different platforms. In every distributed scenario, on which platform the UI components are decided (by system or user, dynamically or statically) to reside would alter how the UI needs to be adjusted to best fit the new platform. For example, allowing a UI to be transferred between a limited display of a PDA and a larger display such as a tabletop would require adjustment for how the different UI components are to be adjusted to fit the limitations of each platform.
 
 \subsubsection{Task: What to Distribute?} 
-One perspective to look at the distribution of recommender system is to identify the recommendation tasks that could be distributed. For a system to be distributed, one or many tasks should be considered to be carried out simultaneously or not in a distributed way. A task could be distributed into several subtasks to be carried out by one user, but on different platforms, in the same environment, over time. 
-For the proposed distributed recommender system design, the following tasks are considered for distribution: presentation of recommended items, item consumption, recommended content filtering, recommended content rating, and sharing of recommended contents along different users of the system.\\ 
-UI components constituting the interactive systems through which a user could undertake such tasks could be thought of as the unit of UI distribution. In the distribution of such tasks, full or part of the UI can be transferred among platforms and devices through a simple user action, such as a gesture. For user input and interaction with the system, the use of gesture, such as panning and swiping, is considered to reduce cognitive overhead [cite]. The decomposability of the system components enables one or more of the distributed UI elements to be executed independently without losing their functionality. It is also important to ensure the consistency of performing the different distributed actions; i.e. to ensure that a distributed action (for example phase of recommendation) is supported on the different platforms. Such actions can be carried out in various ways, hence, increasing the flexibility of the system. \\
+One perspective to look at the distribution of recommender systems is to
+identify the recommendation tasks that could be distributed. For a system to be distributed, one or many tasks should be considered to be carried out simultaneously or not in a distributed way. A task could be distributed into several subtasks to be carried out by one user, but on different platforms, in the same environment, over time.
+For the proposed distributed recommender system design, the following tasks are
+considered for distribution: presentation of recommended items, item
+consumption, recommended content filtering, recommended content rating, and
+sharing of recommended contents among different users of the system.\\
+UI components constituting the interactive systems through which a user could
+undertake such tasks could be thought of as the unit of UI distribution. In the
+distribution of such tasks, full or part of the UI can be transferred among
+platforms and devices through a simple user action, such as a gesture. For user
+input and interaction with the system, the use of gesture, such as panning and
+swiping, is considered to reduce cognitive overhead \cite{woerndl2012combining}.
+The decomposability of the system components enables one or more of the distributed UI elements to be executed independently without losing their functionality.
+It is also important to ensure the consistency of performing the different distributed actions; i.e. to ensure that a distributed action (for example phase of recommendation) is supported on the different platforms.
+Such actions can be carried out in various ways, hence, increasing the flexibility of the system.
 
 \subsection{Generic Scenarios for UI Distribution}
-Presented in this section is a set of generic scenarios for UI Distribution of interactive systems that are thought to be applicable for recommender systems. The need for UI distribution is detected in each scenario, and later, distributed alternatives to the regular scenarios are computed, with an execution strategy provided for such alternatives. In all scenarios, we consider the recommendation tasks as the core of the distribution scenario. We assume the existence of multiple platforms and devices in each scenario. Moreover, in all of the scenarios, we evaluate the time distribution and user/system distribution dimensions. 
+Presented in this section is a set of generic scenarios for UI Distribution of
+interactive systems that are applicable to recommender systems. The need for UI
+distribution is detected in each scenario, and later, distributed alternatives to the regular scenarios are computed, with an execution strategy provided for such alternatives. In all scenarios, we consider the recommendation tasks as the core of the distribution scenario. We assume the existence of multiple platforms and devices in each scenario. Moreover, in all of the scenarios, we evaluate the time distribution and user/system distribution dimensions.
   
-\subsubsection{Migrating Item Consumption}                    
-In almost all types of recommender systems applications, there is an item to consume. Therefore, one of the main distribution scenarios to consider is the distribution of the task of recommended items' consumption. Unlike the regular scenario, where the user of a recommender system is presented with the recommended items and is able to select and consume an item on the same device, a distributed alternative would be to present the recommended content on one device while giving the user the ability to consume the content on the other device. As shown in figure \ref{fig:figure31}, this scenarios could be triggered by the user performing a gesture on one of the items presented on the presentation node (i.e. the node that would contain the presentation of the recommended content). The item consumption task is now migrated to be carried out on the other device/platform. 
-\begin{figure}[h]
+\subsubsection{Migrating Item Consumption}
+\begin{figure}[!htpb]
 \includegraphics[width=0.9\textwidth, center, center]{figures/generic1}
 \caption{Migrating item consumption from presentation node to consumption node.}
 \label{fig:figure31}
-\end{figure}
+\end{figure}                    
+In almost all types of recommender systems applications, there is an item to
+consume. Therefore, one of the main distribution scenarios to consider is the
+distribution of the task of recommended items' consumption. Unlike the regular
+scenario, where the user of a recommender system is presented with the
+recommended items and is able to select and consume an item on the same device,
+a distributed alternative would be to present the recommended content on one
+device while giving the user the ability to consume the content on the another device. As shown in figure \ref{fig:figure31}, this scenario could be triggered by the user performing a gesture on one of the items presented on the presentation node (i.e. the node that would contain the presentation of the recommended content). The item consumption task is now migrated to be carried out on the other device/platform.
 Here comes the question of time of distribution of the item consumption along the two platforms, as well as the question of who (user or system) makes the decision of which UI components of this scenario are to be displayed on which platform. These questions add variations to the scenario on hand.\\
 The system could load the UI components with a pre-configuration allowing the user to only perform the action to be done in a specific manner. Alternatively, the system could dynamically at run-time elicit from the user a distribution scheme for the UI. For example, the user could be asked to choose which UI component (relevant to this scenario) are to be migrated and which are to reside. The system delays the decision of which UI components to show on which platform. Beside the item consumption task distribution, this variation of the scenario demonstrates the time distribution and user distribution dimensions.
       
 \subsubsection{Performing Parallel Activities}
-\begin{figure}[h]
+\begin{figure}[!htpb]
 \includegraphics[width=0.9\textwidth, center, center]{figures/generic2}
 \caption{Performing parallel activities on different distribution nodes.}
 \label{fig:figure32}
@@ -49,33 +70,39 @@ In a distributed environment, presenting the user with different platforms throu
 The system could dictate this on the user and present the distribution strategy to perform these tasks in parallel not as an option but as how the system functions. Alternatively, the system could let the user configure which activities are to be done in parallel. This configuration is saved and loaded whenever these actions are to be performed. The user could also choose to restore the system's original configuration or let the system be the initiator of the distribution.
     
 \subsubsection{Overview And Detail Presentations}
-In a distributed environment with multiple displays, LD-SD modes are used to show different versions of the presented content to the user. There is always a concern on using different display modes of what to choose to present to the user on which display/mode and what would be the basis for this choice. There is also the question of how to present the content differently on each mode based on its capabilities.\\
-The presentation of the recommended content could be done at a different level of granularity. Fine granularity is offered on SD while coarse level of presentation is provided on the LD. This way, we provide the user with alternative ways to view the content. At a glance, he/she could get an overview of the provided content with a graphical indicator for the recommendation score on the LD. If more details are needed, the SD would provide more  detailed information. This concept of UI distribution is what comes to be known as overview-detail coupling [cite].\\
-Figure \ref{fig:figure33} suggests presenting a detailed presentation  of content on the SD on which the user could get all available detailed information of the provided content (for example in a form of a detailed list), while on the LD, the user could be presented with an overview of the same content (for example, in the form of picture icons with titles presented with in different sizes). Selecting an item on either mode later could lead to the execution of a proceeding task on either platform such as item consumption or viewing more information for the item.\\      
-\begin{figure}[h!]
+\begin{figure}[!htpb]
 \includegraphics[width=0.9\textwidth, center, center]{figures/generic3}
 \caption{Overview-Detail Presenations}
 \label{fig:figure33}
 \end{figure}
+In a distributed environment with multiple displays, LD-SD modes are used to show different versions of the presented content to the user. There is always a concern on using different display modes of what to choose to present to the user on which display/mode and what would be the basis for this choice. There is also the question of how to present the content differently on each mode based on its capabilities.\\
+The presentation of the recommended content could be done at a different level
+of granularity. Fine granularity is offered on SD while coarse level of
+presentation is provided on the LD. This way, we provide the user with
+alternative ways to view the content. At a glance, he/she could get an overview
+of the provided content with a graphical indicator for the recommendation score
+on the LD. If more details are needed, the SD would provide more  detailed
+information. This concept of UI distribution is what comes to be known as
+overview-detail coupling \cite{kaviani2011dual}.\\
+Figure \ref{fig:figure33} suggests presenting a detailed presentation  of content on the SD on which the user could get all available detailed information of the provided content (for example in a form of a detailed list), while on the LD, the user could be presented with an overview of the same content (for example, in the form of picture icons with titles presented in different sizes). Selecting an item on either mode later could lead to the execution of a proceeding task on either platform such as item consumption or viewing more information for the item.\\      
 The previous design is to be inherited by the system, which makes the UI distribution strategy in this scenario initiated by the system and not the user. It also implies that the distribution of UI components related to this scenario are statically known to the system at compile/load time without the possibility of having them dynamically configured or reconfigured at run-time. Alternatively, the system could ask the user if this configuration makes sense to him/her, and then adds this option as a setting in the system and load the components accordingly. That would be a case of time distribution. 
-  
 \subsubsection{Content Filtering}
-As the user is presented with a wide array of recommended content, he/she might be willing to filter his/her choice of what to consume of this content. On a multi-device/platform environment, the filtering task could be distributed along the different nodes of the system. As shown in figure \ref{fig:figure34}, the user could initiate a gesture on items on node X to be transferred/redirected to node Y. By the end of this process, the user ends up with a presentation of all the selected/filtered items on node Y. The user could next select one of these items to view more details. This is an example of synchronous task distribution along different platforms.
-  
-\begin{figure}[h!]
+\begin{figure}[!htpb]
 \includegraphics[width=0.9\textwidth, center, center]{figures/generic4}
 \caption{Recommended Content Filtering}
 \label{fig:figure34}
 \end{figure}
-
+As the user is presented with a wide array of recommended content, he/she might be willing to filter his/her choice of what to consume of this content. On a multi-device/platform environment, the filtering task could be distributed along the different nodes of the system. As shown in figure \ref{fig:figure34}, the user could initiate a gesture on items on node X to be transferred/redirected to node Y. By the end of this process, the user ends up with a presentation of all the selected/filtered items on node Y. The user could next select one of these items to view more details. This is an example of synchronous task distribution along different platforms.
+  
 \subsubsection{Content Redirection}
-Content (output) redirection is a key feature in a multi-device environment [cite]. It is argued to be more important in case of multi-user systems, however, it could still be leveraged for single-user scenarios. Item consumption redirection is considered one special case of content redirection. Other examples would be redirecting recommended content details to be presented between SD and LD displays. Figure \ref{fig:figure35} shows how node X presents the recommended content, while on performing a gesture on any of the items, this content could be transferred/redirected to be presented on node Y. This usually means the distribution of UI components representing this content is what enables the redirection of content seamlessly between the two presentation nodes. The user could possibly then proceed with item consumption on the same node or on a different node.   
-\begin{figure}[h!]
+\begin{figure}[!htpb]
 \includegraphics[width=0.9\textwidth, center, center]{figures/generic5}
 \caption{Content Redirection}
 \label{fig:figure35}
 \end{figure}
-
+Content (output) redirection is a key feature in a multi-device environment
+\cite{elmqvist2011distributed}.
+It is argued to be more important in case of multi-user systems, however, it could still be leveraged for single-user scenarios. Item consumption redirection is considered one special case of content redirection. Other examples would be redirecting recommended content details to be presented between SD and LD displays. Figure \ref{fig:figure35} shows how node X presents the recommended content, while on performing a gesture on any of the items, this content could be transferred/redirected to be presented on node Y. This usually means the distribution of UI components representing this content is what enables the redirection of content seamlessly between the two presentation nodes. The user could possibly then proceed with item consumption on the same node or on a different node.
 This scenario is inherently initiated by the user since he/she would be detecting and executing the need for UI distribution of a specific component or group of components along the different platforms. It is also inherently time distributed, since the system dynamically reconfigures the UI based on the user's input that could only be elicited at run-time. After performing such task, the user could select to have the system reconfigure the UI to its original state before the redirection took place.
 
 \subsubsection{Migration of Items Between Users}
@@ -85,9 +112,23 @@ Another special case of content redirection is the migration of a list of recomm
 The proposed design is for a single-user, multi-device video cast recommendation application, in which the user interface and recommendation subtasks are distributed along the devices. The goal of the design is to leverage the capabilities of the distributed UI environment in order to find a new way to present the recommendation tasks and results to the user. In this section, we show how the recommendation tasks such as presenting the recommended items, item consumption, item rating, and others could be done in a distributed fashion. Our design is mainly targeted at benefiting from both platforms to make the post-recommendation phase of such system more efficient and more user-centric.
 
 \subsection{UI Distribution In a Single-User System}
-Our goal is the UI distribution of a single-user recommender system. The case for UI distribution of group recommenders in a multi-user environments has been made by a number of studies [cite]. The group recommendation involve multiple users with multiple devices. And since the main goal of a group recommendation is to reach consensus about a recommendation, distributed UI components that could be shared among the group members to reach this consensus is needed.
+Our goal is the UI distribution of a single-user recommender system. The case
+for UI distribution of group recommenders in a multi-user environments has been
+made \cite{worndlvoting}. The group recommendation involve multiple users with
+multiple devices.
+And since the main goal of a group recommendation is to reach consensus about a recommendation, distributed UI components that could be shared among the group members to reach this consensus is needed.
 
-Less research have been made to make a case for the use of UI distribution of for single-user recommender systems. In such system, since a single user is involved in the process, and the consensus activity does not exist, it could be more challenging to think of what the distribution could be useful for in a single-user scenario. The main question on designing for such a system is to answer the question of why a single user would need a distributed environment; one with multiple devices and platforms. Why and if the action of recommendation for a single user with its various phases could be carried out on multiple devices/platforms, and whether the overhead(refer to the overhead described in earlier chapter) of distribution such a system is of an added value. The main challenge would be the introduction of a distribution mechanism for this system in such a way that does not hinder the process, and that would actually serve it. Also, the distribution should be done in such a way that does not introduce an overhead of shifting the user's attention from one platform/device to the other. 
+Less research have been made to make a case for the use of UI distribution for
+single-user recommender systems. In such system, since a single user is involved
+in the process, and the consensus activity does not exist, it could be more
+challenging to think of what the distribution could be useful for in a
+single-user scenario. The main question on designing for such a system is to
+answer the question of why a single user would need a distributed environment;
+one with multiple devices and platforms. Why and if the action of recommendation for a single user with its various phases could be carried out on multiple devices/platforms, and whether the overhead of distributing such system is of an added value. 
+The main challenge would be the introduction of a distribution mechanism for
+this system in such a way that does not hinder the process, but that would
+actually serve it. Morevoer, the distribution should be done in such a way that
+does not introduce an overhead of shifting the user's attention from one platform/device to the other.
 
 \subsection{Platforms and Environment}
 \begin{figure}[h!]
@@ -101,11 +142,28 @@ To address some of the challenges mentioned in the previous section about design
 In this section, concrete UI distribution scenarios of pre and post recommendation tasks are provided. The reason for which tasks or UI components are selected to be displayed on which display is elaborated, as well as pinpointing the cases of time and user distribution in each concrete scenario.
 
 \subsubsection{Pre-Configuring UI Distribution Options}
-This scenario presents the initiation point of the system, in which the user is given an option to pre-configure the different options the system offers for UI distribution, and hence be the initiator of UI distribution. What this offers is the ability to delay the decision of which UI components to present on which platform making the system distributed in time. Moreover, it gives the user the option of detecting a need for distribution and deciding on the UI distribution scheme he/she would prefer instead of delegating this task to the system. This is made possible by presenting the user with a Meta UI in which he/she are asked to drag and drop the components of their choice to the target platform. After this step is done, the user is also asked if he/she would like to save this configuration for later use and setting it as the main option or if it should only be used once, in such case, every time the system reboots, this Meta UI will be loaded to elicit the user's distribution preferences. On the system side, this scenario is a case of time distribution, as the system could then decide dynamically on a UI distribution scheme.  
+This scenario presents the initiation point of the system, in which the user is given an option to pre-configure the different options the system offers for UI distribution, and hence be the initiator of UI distribution.
+What this offers is the ability to delay the decision of which UI components to
+present on which platform, making the system distributed in time. Moreover, it
+gives the user the option of detecting a need for distribution and deciding on
+the UI distribution scheme he/she would prefer instead of delegating this task
+to the system. This is made possible by presenting the user with a Meta UI in
+which he/she is asked to drag and drop the components of their choice to the
+target platform. After this step is done, the user is also asked if he/she would
+like to save this configuration for later use and setting it as the main option
+or if it should only be used once, in such case, every time the system reboots,
+this Meta UI will be loaded to elicit the user's distribution preferences. On
+the system side, this scenario is a case of time distribution, as the system
+could then decide dynamically on a UI distribution scheme based on the user's
+input that is given at run-time.
 
 \subsubsection{User Profile Creation}
 The pre-recommendation phase usually starts by the elicitation of a user profile. Creating a profile usually involves filling out information forms, and likely rating some prototype items or entering preferences. This step would differ from one system to the other. For the video recommender, this involves asking the user directly to enter basic information and to rate a list of topics and interests to give a background about the user's preferences. 
-The assumption in this step is that filling out textual forms as well as rating would better be performed on the handheld device than a larger display. The user is assumed to have more control over input for smaller devices. Therefore, this task starts at in the SD. After the user finishes the profile creation step on the SD, the recommended content is then displayed on both SD and LD displays.
+The assumption in this step is that filling out textual forms as well as rating
+would better be performed on the handheld device than a larger display. The user
+is assumed to have more control over input for smaller devices
+\cite{kaviani2011dual}. Therefore, this task starts in the SD. After the user
+finishes the profile creation step on the SD, the recommended content is then displayed on both SD and LD displays.
 \begin{figure}[h!]
 \includegraphics[width=0.85\textwidth, center,
 center]{figures/presentation-detail}
@@ -119,7 +177,7 @@ The presentation of recommended video casts is shown in parallel on the SD and L
 
 \subsubsection{Recommended Item Details Presentation}
 For presenting the user with detailed information about the recommended videos, the recommendation list offers a link to a detailed information page on the mobile device in a master-detail fashion. As the user clicks on the item in the list, the user enters the detailed information page on the mobile device.\\
-Before loading the details-view for the first time in on the SD, the user is prompted with a dialogue asking if he/she would like to redirect the details view to be displayed on the LD, or to show the details in parallel on both displays. Later, the user is also asked if this configuration is to be saved for later use. Based on the user's choice, the details view is either loaded on the SD or LD or both.\\
+Before loading the details-view for the first time on the SD, the user is prompted with a dialogue asking if he/she would like to redirect the details view to be displayed on the LD, or to show the details in parallel on both displays. Later, the user is also asked if this configuration is to be saved for later use. Based on the user's choice, the details view is either loaded on the SD or LD or both.\\
 Alternatively, the user could be the initiator for the UI distribution by
 deciding to redirect the content as the need is detected. As shown in figure
 \ref{fig:figure38} content redirection is possible for viewing details information on the LD by applying a simple swipe-right gesture on any of the video items on the SD list. Consequently, the video details content will be redirected to be displayed in parallel on the LD.\\ 
@@ -129,35 +187,52 @@ videos list and could move it to the LD by applying the gesture, as opposed to
 just mirroring or transferring the UI at a more coarse granularity.
 Melchior et al. \cite{melchior2011distribution} points out that the problem is
 that the granularity of UI distributed elements is often coarse-grained; it is
-not possible to distribute at the widget level. We argue that our design
-overcomes this problem.\\
+not possible to distribute at the widget level. Accordingly, our proposed design 
+overcomes this problem.
 \subsubsection{Recommended Item Consumption}
-Similar to the recommended item details scenario, item consumption redirection is also given as an option to the user by asking the user if redirecting item consumption to the LD is his/her preferred option or if it should the content should be played on the SD, and saving this configuration for later use. Consequently, if the user selects to consume the content on the LD, playing the recommended videos is done as depicted by figure \ref{fig:figure36}. On the video details page, the user performs a pan gesture on the video image,  which then triggers the migration of the video consumption from the mobile device to the LD. The video player automatically stars on the LD, providing the user with all controls for the video playback.  
-\begin{figure}[h!]
+Similar to the recommended item details scenario, item consumption redirection is also given as an option to the user by asking the user if redirecting item consumption to the LD is his/her preferred option or if the content should be played on the SD, and saving this configuration for later use. Consequently, if the user selects to consume the content on the LD, playing the recommended videos is done as depicted by figure \ref{fig:figure36}. On the video details page, the user performs a pan gesture on the video image,  which then triggers the migration of the video consumption from the mobile device to the LD. The video player automatically stars on the LD, providing the user with all controls for the video playback.  
+Alternatively, the system could only enable playing the video on one display, SD (as done on the non-distributed version), or would only enable playing the video by redirecting it to the LD. 
+\begin{figure}[!htpb]
 \includegraphics[width=0.9\textwidth, center, center]{figures/playrate}
 \caption{Recommended Items Consumption.}
 \label{fig:figure36}
 \end{figure}
-Alternatively, the system could only enable playing the video on one display, SD (as done on the non-distributed version), or would only enable playing the video by redirecting it to the LD. 
-
 \subsubsection{Rating of Recommended Items}
-There are two different proposed options for the rating task. The first option is distributed in time and done in parallel with the video playback. As shown in figure \ref{fig:figure36}, after the video playback starts automatically on the LD as described in the previous section, the LD triggers the mobile device to display the rating page for the user on the SD. Hence, the two tasks could be carried out simultaneously by the user.
-Alternatively, the user could also be triggered to enter the rating on the mobile device after the video has ended playing or if stopped by the user on the LD. In such case, there is no parallelization of the tasks, however there is still synchronisation between the tasks that are carried out synchronously on the different platforms. In such case, the system would be the initiator of distribution rather than the user.\\
+There are two different proposed options for the rating task. The first option
+is distributed in time and done in parallel with the video playback. As shown in figure \ref{fig:figure36}, after the video playback starts automatically on the LD as described in the previous section, the LD triggers the mobile device to display the rating page for the user on the SD. Hence, the two tasks could be carried out simultaneously by the user.
+Alternatively, the user could also be triggered to enter the rating on the mobile device after the video has ended playing or if stopped by the user on the LD. In such case, there is no parallelization of the tasks, however there is still synchronisation between the tasks that are carried out synchronously on the different platforms. In such case, the system would be the initiator of distribution rather than the user.
 The rating, similar to the user profile creation, include user input such as indication of likes or entering textual comments and reviews, which is also believed to be best done on a mobile device with a better controlled input, for the user's convenience.  
 
 \subsubsection{Filtering Recommended Items}
-The filtering for the recommended items, although not a main task in recommendation, is believed to add to the value of the system in the proposed distributed UI environment. It is one of the tasks that leverages from the availability of the different platforms for the benefit of the user's experience. As shown in figure \ref{fig:figure39}, the filtering is done by performing a left swipe gesture on the video item in the list view on the mobile device.
-\begin{figure}[h!]
+\begin{figure}[!htpb]
 \includegraphics[width=0.85\textwidth, center, center]{figures/filtering}
 \caption{Filtering of Recommended Items.}
 \label{fig:figure39}
 \end{figure}
-This gesture redirects the content of the video to the LD. The display of the content on the LD is also done in a overview-detail coupling manner as described in earlier section. After the user is done filtering (redirecting selected content from SD to LD), LD will contain all the selected items displayed in an overview fashion. More details could be access through the SD or by also clicking on the item on the LD.  
+The filtering of the recommended items, although not a main task in
+recommendation, adds to the value of our DUI video recommender. It is one of the
+tasks that leverages the availability of the different platforms for the benefit
+of the user's experience. As shown in figure \ref{fig:figure39}, the filtering
+is done by performing a right swipe gesture on the video item in the list view
+on the mobile device. This gesture redirects the content of the video to the LD.
+The display of the content on the LD is also done in a overview-detail coupling manner as described
+earlier. After the user is done filtering (redirecting selected content from SD
+to LD), the LD will contain all the selected items displayed in an overview
+fashion. More details could be accessed through the SD or by also clicking on
+the item on the LD.
 
 \subsubsection{Redirecting Favourites Lists}
-Unlike all previously described scenarios which involve a single user of the system, this scenario involves two or more users. On the SD, the user selects lists which hold his/her favourite items, top-rated items, or last watched items. On applying a long-press on the list, the user is prompted with a list of users from which he could select one or more users to transfer this list to. This type of scenario, similar to content redirection and item consumption redirection, is initiated by the user as found wanted , hence, the scenario is consider to distributed by user.\\
+Unlike all previously described scenarios which involve a single user of the
+system, this scenario involves two or more users. On the SD, the user selects
+lists which hold his/her favourite items, top-rated items, or last watched
+items. On applying a long-press on the list, the user is prompted with a list of
+users from which he could select one or more users to transfer this list to.
+This type of scenario, similar to content redirection and item consumption
+redirection, is initiated by the user as found wanted , hence, the scenario is
+consider to be distributed by the user.\\
 
-Table \ref{tab:table31}  sums-up the presented scenarios with respect to all the mentioned UI distribution dimensions. In the following chapter, the implementation details of a selected subset of the distributed scenarios are described.
+Table \ref{tab:table31} sums up the presented scenarios with respect to all the
+mentioned UI distribution dimensions. In the following chapter, the implementation details of a selected subset of the distributed scenarios are described.
 \begin{table}[position specifier]
   \centering
   \begin{tabular}{ |l|c|c|c|c| }
