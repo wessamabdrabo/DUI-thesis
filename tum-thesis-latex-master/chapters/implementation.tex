@@ -15,7 +15,7 @@ Consequently, tasks and activities involved in the pre-recommendation phase are
 not implemented.
 A recommendation engine is also not included since the focus of the study is not
 recommendation generation. Instead, we provide the user with a set of
-pre-selected video items.\\ 
+pre-selected video items.\par 
 This section provides the set of functionalities included in DiRec, as well as
 an explanation of implementation details, together with explanations for the
 rationale behind using the frameworks, programming languages, platforms and
@@ -58,7 +58,7 @@ functionalities are thought of as special cases, or extensions, of MiRec:
 	as well as an overview of the top recommended video items on the LD. Both views should be presented in parallel one triggered by the other.
 	\item Getting the video details should be available on the SD. Additionally, the user should be able to transfer the details of the video to be displayed on the LD using a simple gesture. 
 	\item The video consumption/playing is distributed between the two displays. The user should be able to select the video on the mobile phone and with a simple gesture, should be able to trigger playing the video on the LD.
- \item Once the video starts playing on the LD, the user should be prompted with the rating view on the SD. Both functionaries (playing and rating) could be done in parallel.
+ \item Once the video starts playing on the LD, the user should be prompted with the rating view on the SD. Both functionalities (playing and rating) could be done in parallel.
  \item The user should also be able to filter his/her choices of videos. This use case is also distributed along both devices. The user should be able to apply a gesture on the selected video on the SD and get this video to be transferred to the LD. By the end of this process, the user should be able to be presented of all filtered videos on the LD. 
 \end{itemize} 
 The remainder of this chapter is dedicated to describe the implementation
@@ -78,7 +78,7 @@ This section provides implementation details of each application as well as the 
 \end{figure}
 
 \subsection{SD Mobile Application}
-The first step of implementation, after deciding on the set of functionalities that should be present in each version as described in the previous section, was to start with creating a storyboard for the first non-distributed version of the application. As mentioned, the mobile application is implemented as a native iOS application running on iPhone mobile device. The app was written in Objective C, and uses Apple's iOS SDK 8.4 and basic frameworks for the implementation of most of the functionalities, except for some third party APIs that will be mentioned later. Xcode version 6.4 was used in implementing and preparing the distribution version of the app.\\
+The first step of implementation, after deciding on the set of functionalities that should be present in each version as described in the previous section, was to start with creating a storyboard for the first non-distributed version of the application. As mentioned, the mobile application is implemented as a native iOS application running on iPhone mobile device. The app was written in Objective C, and uses Apple's iOS SDK 8.4 and basic frameworks for the implementation of most of the functionalities, except for some third party APIs that will be mentioned later. Xcode version 6.4 was used in implementing and preparing the distribution version of the app.\par
 DiRec's SD component and MiRec did not vary with respect to the design of most
 of the UI views and navigation options. Therefore, the
 storyboard was not changed to a great extend from MiRec to DiRec. The main
@@ -99,7 +99,13 @@ development. Hence, a Python-based application was rather considered for
 providing a more portable and light-weight solution for the development of this
 special purpose prototype. Consequently, for the implementation of the desktop
 application, we use Kivy \cite{kivyDoc}; an open-source Python-based library that was
-developed with the creation of innovative user interfaces and rapid development as its primary edge. Kivy provides the tools needed to build graphical UI within its basic library, as well as libraries needed for video playback. The graphics engine is built over OpenGL ES 2, using a fast graphics pipeline. It also supports third party libraries that would be easily integrated for network communication with the iOS application as described in the following section. Kivy's portability makes it possible to run the developed application on any platform: Windows, Linux, OS X, iOS Android, which provides a length of variety on the selected platform for deployment.
+developed with the creation of innovative user interfaces and rapid development
+as its primary edge. Kivy provides the tools needed to build graphical UI within
+its basic library, as well as libraries needed for video playback. The graphics
+engine is built over OpenGL ES 2, using a fast graphics pipeline. It also
+supports third party libraries that would be easily integrated for network
+communication with the iOS application as described in the following section.
+Kivy's portability makes it possible to run the developed application on any platform: Windows, Linux, OS X, iOS and Android, which provides a length of variety on the selected platform for deployment.
  
 \subsection{Communication Layer}
 The development of applications with distributed UI components among different
@@ -107,11 +113,11 @@ platforms is not made possible through special frameworks or tools. Therefore,
 it is up to every application developer to build a solution that makes the
 UI distribution requirements achievable. In our model, we rely on a
 message-exchange protocol between the iOS mobile application and the desktop
-Kivy application. This message exchange work as commands sent between the two
-applications to execute certain tasks (e.g. play video, show details, etc ...). This communication needs to be light-weight and quick to prevent any latency. One of the design goals is to provide seamless distribution of the UI between the two displays, such that the user would be able to carry out the tasks as efficiently as if the task was not distributed in the first place. Hence, the network communication between the iOS application and the Kivy desktop application is chosen to done through socket communication over TCP/IP. The desktop application, besides running its main functionalities, also runs as a custom TCP server that listens to connections on a given TCP socket. The client in this scenario is the iOS application which initiates connection once the app is running on a specific port and IP address. Using TCP sockets for communication makes the implementation of the communication layer independent on a web server, which also means a freedom to choose the implementation language for the server. Moreover, using TCP sockets provides light-weight means for building a lean and efficient protocol for communication through which we could send exact messages that needs to be sent between the applications.\\
-To build the network protocol and the custom server on the desktop side Twisted
-is used. Twisted is a Python networking framework that makes network
-communication easier than using Python's basic networking library. Kivy also
+Kivy application. This message exchange works as commands sent between the two
+applications to execute certain tasks (e.g. play video, show details, etc ...).
+This communication needs to be light-weight and quick to prevent any latency.
+One of the design goals is to provide seamless distribution of the UI between
+the two displays, such that the user would be able to carry out the tasks as efficiently as if the task was not distributed in the first place. Hence, the network communication between the iOS application and the Kivy desktop application is chosen to be done through socket communication over TCP/IP. The desktop application, besides running its main functionalities, also runs as a custom TCP server that listens to connections on a given TCP socket. The client in this scenario is the iOS application which initiates connection once the app is running on a specific port and IP address. Using TCP sockets for communication makes the implementation of the communication layer independent on a web server, which also means a freedom to choose the implementation language for the server. Moreover, using TCP sockets provides light-weight means for building a lean and efficient protocol for communication through which we could send exact messages that needs to be sent between the applications.\par To build the network protocol and the custom server on the desktop side Twisted is used. Twisted is a Python networking framework that makes network communication easier than using Python's basic networking library. Kivy also
 comes with built-in support for Twisted. On the iOS side, the CFStream API is
 used to establish a socket connection and, with the stream object created as a result, send data to and receive data from the custom python server on the desktop side.
 
@@ -134,7 +140,7 @@ prototype, fast access of data was needed. Since the collected data fits a
 dictionary representation and has no relational aspect, creating a separate
 database was thought of as redundant. Moreover, the duplication of the property
 list resource on both sides is considered a more efficient option than having
-to access a shared resource despite of the update overhead that would be necessary if any of the copies were to be edited.\\
+to access a shared resource despite of the update overhead that would be necessary if any of the copies were to be edited.\par
 Appendix \ref{chapter:appendA} provide a high-level class diagram for both iOS
 and LD desktop applications for more details.
 
@@ -148,7 +154,7 @@ pairing mechanism would need to be implemented. Once Twisted is started and
 added successfully to the main loop of the Kivy application, the desktop app
 enters the \textit{Waiting for Connection} state. Consequently, DiRec's LD
 component's welcome screen is shown, which indicates that the server is running and
-waiting for connection.\\
+waiting for connection.\par
 On the iOS application side, a Communication Manager singleton class is
 initialised in the App Delegate once the application finishes launching. In the Communication Manager init method, NSStreams (input and output) are created after a connection with the server is requested at the given IP address and port which are also hardcoded with the same values as the desktop application. Once a connection is made successfully (given that the server is already running), Communication Manager initialises the messaging protocol with the following messages:
 \begin{itemize}
@@ -239,7 +245,7 @@ page, besides viewing the video's details, to play a video on the LD, the user
 simply taps and drags (panning) the image of the video presented in the centre
 of the screen towards the bottom of the screen. Figure \ref{fig:figure45a} shows a sample
 of this action. The panning gesture triggers sending a message to the desktop
-server \textbf{\textit{play:<videoID>}}, which sends the play command and the selected video id to the server. The server receives and parses the message and loads an instance of a video player initialized with the video url. The video player starts streaming the content and displaying it on the attached LD screen. For playing and controlling the video kivy.uix.videoplayer package is used which is built-in in the Kivy library.\\
+server \textbf{\textit{play:<videoID>}}, which sends the play command and the selected video id to the server. The server receives and parses the message and loads an instance of a video player initialized with the video url. The video player starts streaming the content and displaying it on the attached LD screen. For playing and controlling the video kivy.uix.videoplayer package is used which is built-in in the Kivy library.\par
 In the non-distributed scenario, MiRec presents the user with a play button on
 top of the video image in the details page. On clicking the button, the video player is loaded as a modal view on top of the details view, where control and playing of the video is made possible on the mobile device.
 \begin{figure}[!htpb]
@@ -289,7 +295,7 @@ Filtering is done by transferring the selected video from the recommendation lis
 The swipe gesture triggers sending a message \textbf{\textit{filter:<videoID>}} from the iOS side to the desktop server side. 
 When the message is received on the server side, the filter page is created as a
 grid layout and each transferred video is added as a new widget to the layout.
-Only the video image and title are shown on the LD. The user is also able to display more information for the page by clicking on the video image on the LD side. Figure \ref{fig:figure47} shows the filtering scenario as presented on the LD and SD.\\
+Only the video image and title are shown on the LD. The user is also able to display more information for the page by clicking on the video image on the LD side. Figure \ref{fig:figure47} shows the filtering scenario as presented on the LD and SD.\par
 
  
 In the next chapter, we are going to present the details of conducting a user
